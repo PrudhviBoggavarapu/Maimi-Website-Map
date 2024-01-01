@@ -40,7 +40,7 @@
 			attribution: '© OpenStreetMap contributors',
 			maxZoom: 18,
 			className:
-				'filter dark:brightness-60 dark:invert dark:contrast-300 dark:saturate-30 dark:custom-hue-rotate dark:custom-brightness'
+				'filter dark:brightness-60 dark:invert dark:contrast-300 dark:saturate-30 dark:custom-hue-rotate dark:custom-brightness flex-grow w-full h-full	'
 		}).addTo(map);
 
 		getCurrentLocation();
@@ -89,11 +89,5 @@
 	});
 </script>
 
-<div bind:this={mapContainer} class="h-screen w-screen"></div>
 <CleanData></CleanData>
-
-<style>
-	.map-tiles {
-		filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
-	}
-</style>
+<div bind:this={mapContainer} class="w-full h-full"></div>
