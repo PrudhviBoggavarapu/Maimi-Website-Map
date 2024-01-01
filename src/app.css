@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS */
+.custom-hue-rotate {
+  filter: hue-rotate(200deg);
+}
+.custom-brightness {
+  filter: brightness(70%);
+}

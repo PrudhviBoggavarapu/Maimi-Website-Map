@@ -1,0 +1,1244 @@
+{
+    "Allapattah": {
+        "api_name": "Allapattah",
+        "results": [
+            {
+                "address": "1799 NW 35th St, Miami, FL  33142, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": {
+                    "Fri": "10:00:00–18:00:00",
+                    "Mon": "10:00:00–18:00:00",
+                    "Sat": "10:00:00–18:00:00",
+                    "Thu": "12:00:00–20:00:00",
+                    "Tue": "10:00:00–18:00:00",
+                    "Wed": "10:00:00–18:00:00",
+                    "closes_soon": 0,
+                    "is_open": 0,
+                    "opens_soon": 0,
+                    "state_switch_time": "12:00"
+                },
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.8087898,
+                "links": "",
+                "longitude": -80.2256335,
+                "phone": "+13056386086",
+                "source": "http://yelp.com/biz/EzDd8wMb_b1Ayo4LpSjVCw",
+                "title": "Allapattah Branch Library",
+                "url": "https://mdpls.org/branch-allapattah"
+            }
+        ]
+    },
+    "Arcola Lakes": {
+        "api_name": "Arcola Lakes",
+        "results": [
+            {
+                "address": "8240 NW Seventh Ave, Miami, FL  33150, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": {
+                    "Fri": "10:00:00–18:00:00",
+                    "Mon": "10:00:00–18:00:00",
+                    "Sat": "10:00:00–18:00:00",
+                    "Thu": "12:00:00–20:00:00",
+                    "Tue": "10:00:00–18:00:00",
+                    "Wed": "12:00:00–20:00:00",
+                    "closes_soon": 0,
+                    "is_open": 0,
+                    "opens_soon": 0,
+                    "state_switch_time": "12:00"
+                },
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.8502313,
+                "links": "",
+                "longitude": -80.2099399,
+                "phone": "+13056942707",
+                "source": "http://yelp.com/biz/kCW6I6GzxVApAY-_OWhPWQ",
+                "title": "Arcola Lakes Branch Library",
+                "url": "https://mdpls.org/branch-arcola-lakes"
+            }
+        ]
+    },
+    "Bay Harbor Islands": {
+        "api_name": "Bay Harbor Islands",
+        "results": [
+            {
+                "address": "1175 95th St, Bay Harbor Islands, FL 33154",
+                "country_code": null,
+                "desc": null,
+                "hours": {},
+                "image": null,
+                "latitude": 25.886,
+                "links": null,
+                "longitude": -80.13232,
+                "phone": "+17865351500",
+                "source": "https://www.tripadvisor.com/Hotel_Review-g34074-d13307555-Reviews-The_Altair_Hotel-Bay_Harbor_Islands_Florida.html?m=63959",
+                "title": "Bay Harbor Islands Branch Library",
+                "url": "https://www.thealtairhotel.com"
+            }
+        ]
+    },
+    "California Club": {
+        "api_name": "California Club",
+        "results": [
+            {
+                "address": "700 Ives Dairy Rd, Miami, FL  33179, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": {
+                    "Fri": "10:00:00–18:00:00",
+                    "Mon": "10:00:00–18:00:00",
+                    "Sat": "10:00:00–18:00:00",
+                    "Thu": "10:00:00–18:00:00",
+                    "Tue": "12:00:00–20:00:00",
+                    "Wed": "12:00:00–20:00:00",
+                    "closes_soon": 0,
+                    "is_open": 0,
+                    "opens_soon": 0,
+                    "state_switch_time": "10:00"
+                },
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.9601721,
+                "links": "",
+                "longitude": -80.1883811,
+                "phone": "+13057703161",
+                "source": "https://maps.apple.com/place?q=California Club Branch Library&auid=10388038444586950783&address=700 Ives Dairy Rd, Miami, FL  33179, United States&ll=25.9601721,-80.1883811",
+                "title": "California Club Branch Library",
+                "url": "https://www.mdpls.org/branch-california-club"
+            }
+        ]
+    },
+    "Civic Center": {
+        "api_name": "Civic Center",
+        "results": [
+            {
+                "address": "2050 Civic Center Pl, Miramar, FL 33025-7803",
+                "country_code": null,
+                "desc": null,
+                "hours": {
+                    "Fri": "10:00:00–18:00:00",
+                    "Mon": "10:00:00–20:00:00",
+                    "Sat": "10:00:00–18:00:00",
+                    "Thu": "10:00:00–18:00:00",
+                    "Tue": "10:00:00–20:00:00",
+                    "Wed": "10:00:00–20:00:00",
+                    "closes_soon": 0,
+                    "is_open": 0,
+                    "opens_soon": 0,
+                    "state_switch_time": "10:00"
+                },
+                "image": null,
+                "latitude": 25.9882385,
+                "links": null,
+                "longitude": -80.3006957,
+                "phone": "+19543578090",
+                "source": "https://www.tripadvisor.com/Attraction_Review-g34454-d10158654-Reviews-Miramar_Branch_Library_Education_Center-Miramar_Broward_County_Florida.html?m=63959",
+                "title": "Miramar Branch Library & Education Center",
+                "url": "https://www.broward.org/library/Pages/BranchDetails.aspx?branchInfo=24"
+            }
+        ]
+    },
+    "Coconut Grove": {
+        "api_name": "Coconut Grove",
+        "results": [
+            {
+                "address": "2875 McFarlane Rd, Miami, FL  33133, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": {
+                    "Mon": "10:00:00–18:00:00",
+                    "Sat": "10:00:00–18:00:00",
+                    "Thu": "10:00:00–18:00:00",
+                    "Tue": "12:00:00–20:00:00",
+                    "Wed": "10:00:00–18:00:00",
+                    "closes_soon": 0,
+                    "is_open": 0,
+                    "opens_soon": 0,
+                    "state_switch_time": "10:00"
+                },
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.7267780257582,
+                "links": "",
+                "longitude": -80.2403374291725,
+                "phone": "",
+                "source": "https://maps.apple.com/place?q=Coconut Grove Branch Library&auid=14072722179631025546&address=2875 McFarlane Rd, Miami, FL  33133, United States&ll=25.726778025758158,-80.24033742917251",
+                "title": "Coconut Grove Branch Library",
+                "url": "https://mdpls.org"
+            }
+        ]
+    },
+    "Concord": {
+        "api_name": "Concord",
+        "results": [
+            {
+                "address": "3882 SW 112th Ave, Miami, FL  33165, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": "",
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.7333452,
+                "links": "",
+                "longitude": -80.3761289,
+                "phone": "+13052071344",
+                "source": "http://yelp.com/biz/HngaOm0CgnLQ-hlQE0J-2w",
+                "title": "Miami‑Dade Public Library - Concord Branch Library",
+                "url": "https://mdpls.org/branch-concord"
+            }
+        ]
+    },
+    "Coral Gables": {
+        "api_name": "Coral Gables",
+        "results": [
+            {
+                "address": "3443 Segovia St, Coral Gables, FL  33134, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": {
+                    "Fri": "10:00:00–18:00:00",
+                    "Mon": "10:00:00–18:00:00",
+                    "Sat": "10:00:00–18:00:00",
+                    "Sun": "10:00:00–18:00:00",
+                    "Tue": "12:00:00–20:00:00",
+                    "Wed": "12:00:00–20:00:00",
+                    "closes_soon": 0,
+                    "is_open": 0,
+                    "opens_soon": 0,
+                    "state_switch_time": ""
+                },
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.7396484,
+                "links": "",
+                "longitude": -80.2658856,
+                "phone": "+13054428706",
+                "source": "http://yelp.com/biz/QQtsW6D4oO2DFGaXVjQiaw",
+                "title": "Miami‑Dade Public Library",
+                "url": "https://mdpls.org/branch-coral-gables"
+            }
+        ]
+    },
+    "Coral Gables(Temporary Location)": {
+        "api_name": "Coral Gables(Temporary Location)",
+        "results": []
+    },
+    "Coral Reef": {
+        "api_name": "Coral Reef",
+        "results": [
+            {
+                "address": "9211 SW 152nd St, Palmetto Bay, FL  33157, United States",
+                "country_code": "US",
+                "desc": null,
+                "hours": "",
+                "image": null,
+                "latitude": 25.6293297,
+                "links": null,
+                "longitude": -80.3429294,
+                "phone": "+13052338324",
+                "source": "http://yelp.com/biz/v7Xo_AIlY5w_BdVhhTAX6A",
+                "title": "Coral Reef Branch Library",
+                "url": "https://mdpls.org/branch-coral-reef"
+            }
+        ]
+    },
+    "Country Walk": {
+        "api_name": "Country Walk",
+        "results": [
+            {
+                "address": "15433 SW 137th Ave N, Miami, FL  33177, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": "",
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.623976,
+                "links": "",
+                "longitude": -80.413231,
+                "phone": "+17862934577",
+                "source": "http://yelp.com/biz/R4xZ1r4gapooF1-n0Ebx3A",
+                "title": "Miami-Dade Public Library System - Country Walk Branch",
+                "url": "https://mdpls.org/branch-country-walk"
+            }
+        ]
+    },
+    "Culmer/Overtown": {
+        "api_name": "Culmer/Overtown",
+        "results": [
+            {
+                "address": "350 NW 13th St, Miami, FL  33136, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": {
+                    "Fri": "09:30:00–18:00:00",
+                    "Mon": "09:30:00–18:00:00",
+                    "Thu": "09:30:00–18:00:00",
+                    "Tue": "09:30:00–18:00:00",
+                    "Wed": "09:30:00–18:00:00",
+                    "closes_soon": 0,
+                    "is_open": 0,
+                    "opens_soon": 0,
+                    "state_switch_time": "09:30"
+                },
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.786609,
+                "links": "",
+                "longitude": -80.200667,
+                "phone": "+13055795322",
+                "source": "https://maps.apple.com/place?q=Culmer/Overtown Branch Library&auid=393408277546320499&address=350 NW 13th St, Miami, FL  33136, United States&ll=25.786609,-80.200667",
+                "title": "Culmer/Overtown Branch Library",
+                "url": "https://mdpls.org/branch-culmerovertown"
+            }
+        ]
+    },
+    "Doral": {
+        "api_name": "Doral",
+        "results": [
+            {
+                "address": "8551 NW 53rd St, Doral, FL  33166, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": "",
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.8200502,
+                "links": "",
+                "longitude": -80.3367537,
+                "phone": "+13057169598",
+                "source": "http://yelp.com/biz/9TEy1WyhB0LP3ezPxNx1ew",
+                "title": "Miami‑Dade Public Library System",
+                "url": "https://mdpls.org/branch-doral"
+            }
+        ]
+    },
+    "Edison Center": {
+        "api_name": "Edison Center",
+        "results": [
+            {
+                "address": "531 NW 62nd St, Miami, FL  33150, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": {
+                    "Fri": "10:00:00–18:00:00",
+                    "Mon": "10:00:00–18:00:00",
+                    "Thu": "10:00:00–18:00:00",
+                    "Tue": "10:00:00–18:00:00",
+                    "Wed": "10:00:00–18:00:00",
+                    "closes_soon": 0,
+                    "is_open": 0,
+                    "opens_soon": 0,
+                    "state_switch_time": "10:00"
+                },
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.8325899,
+                "links": "",
+                "longitude": -80.2052111,
+                "phone": "+13057570668",
+                "source": "http://yelp.com/biz/9q1PO_rWevx76PK-HLDbqw",
+                "title": "Edison Center Branch Library",
+                "url": "https://mdpls.org/branch-edison-center"
+            }
+        ]
+    },
+    "Fairlawn": {
+        "api_name": "Fairlawn",
+        "results": [
+            {
+                "address": "6376 SW Eighth St, West Miami, FL  33144, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": "",
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.7628583,
+                "links": "",
+                "longitude": -80.2994316,
+                "phone": "+13052611571",
+                "source": "http://yelp.com/biz/Pg6uPh4pnaBUdR03mVj14A",
+                "title": "Fairlawn Branch Library",
+                "url": "https://mdpls.org/branch-fairlawn"
+            }
+        ]
+    },
+    "Golden Glades": {
+        "api_name": "Golden Glades",
+        "results": [
+            {
+                "address": "100 NE 166th St, Miami, FL  33162, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": {
+                    "Fri": "10:00:00–18:00:00",
+                    "Mon": "12:00:00–20:00:00",
+                    "Sat": "10:00:00–18:00:00",
+                    "Thu": "10:00:00–18:00:00",
+                    "Tue": "12:00:00–20:00:00",
+                    "Wed": "10:00:00–18:00:00",
+                    "closes_soon": 0,
+                    "is_open": 0,
+                    "opens_soon": 0,
+                    "state_switch_time": "10:00"
+                },
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.9269302,
+                "links": "",
+                "longitude": -80.1972073,
+                "phone": "+13057871544",
+                "source": "http://yelp.com/biz/PZEZBl6igK8op1w14ghSQQ",
+                "title": "Golden Glades Branch Library",
+                "url": "https://mdpls.org/branch-golden-glades"
+            }
+        ]
+    },
+    "Hialeah Gardens": {
+        "api_name": "Hialeah Gardens",
+        "results": [
+            {
+                "address": "13451 NW 107th Ave, Hialeah Gardens, FL 33018, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": "",
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.895989,
+                "links": "",
+                "longitude": -80.372033,
+                "phone": "+13058208520",
+                "source": "http://yelp.com/biz/NZ2Z0hSfRBrTi0zVkZOwjg",
+                "title": "Miami‑Dade Public Library",
+                "url": "https://mdpls.org/branch-hialeah-gardens"
+            }
+        ]
+    },
+    "Hispanic": {
+        "api_name": "Hispanic",
+        "results": [
+            {
+                "address": "1398 SW 1st St, Miami, FL  33135, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": {
+                    "Fri": "09:30:00–18:00:00",
+                    "Mon": "09:30:00–20:00:00",
+                    "Sat": "09:30:00–18:00:00",
+                    "Thu": "09:30:00–20:00:00",
+                    "Tue": "09:30:00–20:00:00",
+                    "Wed": "09:30:00–20:00:00",
+                    "closes_soon": 0,
+                    "is_open": 0,
+                    "opens_soon": 0,
+                    "state_switch_time": "09:30"
+                },
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.7721725,
+                "links": "",
+                "longitude": -80.2175051,
+                "phone": "+13056438574",
+                "source": "http://yelp.com/biz/UXPDfTWAmV9QDvWOzyvp4A",
+                "title": "Miami-Dade Public Library System - Hispanic Branch Library",
+                "url": "https://mdpls.org/branch-hispanic"
+            }
+        ]
+    },
+    "International Mall": {
+        "api_name": "International Mall",
+        "results": [
+            {
+                "address": "10315 NW 12th St, Doral, FL  33172, United States",
+                "country_code": "US",
+                "desc": null,
+                "hours": {
+                    "Fri": "10:00:00–18:00:00",
+                    "Mon": "10:00:00–18:00:00",
+                    "Sat": "10:00:00–18:00:00",
+                    "Thu": "12:00:00–20:00:00",
+                    "Tue": "12:00:00–20:00:00",
+                    "Wed": "10:00:00–18:00:00",
+                    "closes_soon": 0,
+                    "is_open": 0,
+                    "opens_soon": 0,
+                    "state_switch_time": "12:00"
+                },
+                "image": null,
+                "latitude": 25.7842201,
+                "links": null,
+                "longitude": -80.3626435,
+                "phone": "+13055942514",
+                "source": "http://yelp.com/biz/InZO1OnVX4hTRnQadmCc1Q",
+                "title": "International Mall Branch Library",
+                "url": "https://mdpls.org/branch-international-mall"
+            }
+        ]
+    },
+    "Kendale Lakes": {
+        "api_name": "Kendale Lakes",
+        "results": [
+            {
+                "address": "15205 SW 88th St, Miami, FL  33196, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": {
+                    "Fri": "10:00:00–18:00:00",
+                    "Mon": "12:00:00–20:00:00",
+                    "Sat": "10:00:00–18:00:00",
+                    "Thu": "12:00:00–20:00:00",
+                    "Tue": "10:00:00–18:00:00",
+                    "Wed": "10:00:00–18:00:00",
+                    "closes_soon": 0,
+                    "is_open": 0,
+                    "opens_soon": 0,
+                    "state_switch_time": "12:00"
+                },
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.6851823,
+                "links": "",
+                "longitude": -80.4416308,
+                "phone": "+13053880326",
+                "source": "http://yelp.com/biz/nwAhSxf6dS4j85r2rD6JBw",
+                "title": "Kendale Lakes Branch Library",
+                "url": "https://mdpls.org/branch-kendale-lakes"
+            }
+        ]
+    },
+    "Kendall": {
+        "api_name": "Kendall",
+        "results": [
+            {
+                "address": "9101 SW 97th Ave, Miami, FL  33176, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": {
+                    "Fri": "10:00:00–18:00:00",
+                    "Mon": "12:00:00–20:00:00",
+                    "Sat": "10:00:00–18:00:00",
+                    "Thu": "10:00:00–18:00:00",
+                    "Tue": "10:00:00–18:00:00",
+                    "Wed": "12:00:00–20:00:00",
+                    "closes_soon": 0,
+                    "is_open": 0,
+                    "opens_soon": 0,
+                    "state_switch_time": "10:00"
+                },
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.6855501,
+                "links": "",
+                "longitude": -80.3505279,
+                "phone": "+13052790520",
+                "source": "http://yelp.com/biz/vKy6OBv8fzAyl2ZzCCLRcw",
+                "title": "Kendall Branch Library",
+                "url": "https://www.mdpls.org/branch-kendall"
+            }
+        ]
+    },
+    "Key Biscayne": {
+        "api_name": "Key Biscayne",
+        "results": [
+            {
+                "address": "299 Crandon Blvd, Key Biscayne, FL  33149, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": {
+                    "Fri": "09:30:00–18:00:00",
+                    "Mon": "09:30:00–18:00:00",
+                    "Sat": "09:30:00–18:00:00",
+                    "Sun": "13:00:00–17:00:00",
+                    "Thu": "09:30:00–18:00:00",
+                    "Tue": "09:30:00–18:00:00",
+                    "Wed": "09:30:00–18:00:00",
+                    "closes_soon": 0,
+                    "is_open": 0,
+                    "opens_soon": 0,
+                    "state_switch_time": "09:30"
+                },
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.696287,
+                "links": "",
+                "longitude": -80.162636,
+                "phone": "+13053616134",
+                "source": "http://yelp.com/biz/5um361t0mik118Hkw3nczw",
+                "title": "Key Biscayne Branch Library",
+                "url": "https://mdpls.org/branch-key-biscayne"
+            }
+        ]
+    },
+    "Lakes of the Meadow": {
+        "api_name": "Lakes of the Meadow",
+        "results": [
+            {
+                "address": "4284 Southwest 152nd Avenue, Miami, FL 33185, United States",
+                "country_code": "US",
+                "desc": null,
+                "hours": "",
+                "image": null,
+                "latitude": 25.7265393196268,
+                "links": null,
+                "longitude": -80.4402637481689,
+                "phone": "+13052222149",
+                "source": "http://yelp.com/biz/IXt5Z1eg0I66hJKBHICwdg",
+                "title": "Lakes of The Meadow Branch Library",
+                "url": "https://mdpls.org/branch-lakes-of-the-meadow"
+            }
+        ]
+    },
+    "Lemon City": {
+        "api_name": "Lemon City",
+        "results": [
+            {
+                "address": "430 NE 61st St, Miami, FL  33137, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": "",
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.8323730096071,
+                "links": "",
+                "longitude": -80.1870329,
+                "phone": "+13057570662",
+                "source": "http://yelp.com/biz/qGqa0-B_eXwBeOGYMeplEA",
+                "title": "Lemon City Branch",
+                "url": "https://mdpls.libnet.info/branch-lemon-city"
+            }
+        ]
+    },
+    "Little River": {
+        "api_name": "Little River",
+        "results": [
+            {
+                "address": "160 NE 79th St, Miami, FL  33138, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": {
+                    "Fri": "10:00:00–18:00:00",
+                    "Mon": "10:00:00–18:00:00",
+                    "Sat": "10:00:00–18:00:00",
+                    "Thu": "10:00:00–18:00:00",
+                    "Tue": "10:00:00–18:00:00",
+                    "closes_soon": 0,
+                    "is_open": 0,
+                    "opens_soon": 0,
+                    "state_switch_time": "10:00"
+                },
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.8473122,
+                "links": "",
+                "longitude": -80.1936722,
+                "phone": "+13057518689",
+                "source": "http://yelp.com/biz/aHHGBdgf4_a2fkoBoxza-Q",
+                "title": "Little River Branch Library",
+                "url": "https://mdpls.org/branch-little-river"
+            }
+        ]
+    },
+    "Main Library": {
+        "api_name": "Main Library",
+        "results": [
+            {
+                "address": "100 S Andrews Ave, Fort Lauderdale, FL 33301-1830",
+                "country_code": null,
+                "desc": null,
+                "hours": {
+                    "Fri": "10:00:00–18:00:00",
+                    "Mon": "10:00:00–18:00:00",
+                    "Sat": "10:00:00–18:00:00",
+                    "Thu": "10:00:00–18:00:00",
+                    "Tue": "12:00:00–20:00:00",
+                    "Wed": "12:00:00–20:00:00",
+                    "closes_soon": 0,
+                    "is_open": 0,
+                    "opens_soon": 0,
+                    "state_switch_time": "10:00"
+                },
+                "image": null,
+                "latitude": 26.1207688469696,
+                "links": null,
+                "longitude": -80.143096446991,
+                "phone": "+19543577444",
+                "source": "https://www.tripadvisor.com/Attraction_Review-g34227-d527146-Reviews-Broward_County_Main_Library-Fort_Lauderdale_Broward_County_Florida.html?m=63959",
+                "title": "Broward County Main Library",
+                "url": "https://www.broward.org/library/Pages/BranchDetails.aspx?branchInfo=22"
+            }
+        ]
+    },
+    "Miami Beach Regional": {
+        "api_name": "Miami Beach Regional",
+        "results": [
+            {
+                "address": "227 22nd St, Miami Beach, FL  33139, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": "",
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.7980445,
+                "links": "",
+                "longitude": -80.1289809,
+                "phone": "+13055354219",
+                "source": "http://yelp.com/biz/QQ4CqkenTvpc2JXBvAgdrA",
+                "title": "Miami Beach Regional Library",
+                "url": "https://mdpls.org/branch-miami-beach-regional"
+            }
+        ]
+    },
+    "Miami Lakes": {
+        "api_name": "Miami Lakes",
+        "results": [
+            {
+                "address": "6699 Windmill Gate Rd, Miami Lakes, FL  33014, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": "",
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.9235286,
+                "links": "",
+                "longitude": -80.3088884,
+                "phone": "+13058226520",
+                "source": "http://yelp.com/biz/3wjfscvFGzC0cPqFm8pQZg",
+                "title": "Miami‑Dade Public Library",
+                "url": "https://mdpls.org/branch-miami-lakes"
+            }
+        ]
+    },
+    "Miami Springs": {
+        "api_name": "Miami Springs",
+        "results": [
+            {
+                "address": "401 Westward Dr, Miami Springs, FL  33166, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": {
+                    "Fri": "09:00:00–18:00:00",
+                    "Mon": "10:00:00–18:00:00",
+                    "Sat": "10:00:00–18:00:00",
+                    "Sun": "02:00:00–18:00:00",
+                    "Thu": "10:00:00–18:00:00",
+                    "Tue": "12:00:00–20:00:00",
+                    "Wed": "10:00:00–18:00:00",
+                    "closes_soon": 0,
+                    "is_open": 0,
+                    "opens_soon": 0,
+                    "state_switch_time": "10:00"
+                },
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.8214756,
+                "links": "",
+                "longitude": -80.2876709,
+                "phone": "+13058053811",
+                "source": "http://yelp.com/biz/pi6Re8pUZOSLocofH-nGtQ",
+                "title": "Miami Springs Branch Library",
+                "url": "https://mdpls.org/branch-miami-springs"
+            }
+        ]
+    },
+    "Model City": {
+        "api_name": "Model City",
+        "results": [
+            {
+                "address": "2211 NW 54th St, Miami, FL  33142, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": "",
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.8245194,
+                "links": "",
+                "longitude": -80.23356,
+                "phone": "+13056362233",
+                "source": "http://yelp.com/biz/COxJcEz3w5nzVJkmTdY4Cg",
+                "title": "Model City Branch Library",
+                "url": "https://mdpls.org/branch-model-city"
+            }
+        ]
+    },
+    "Naranja": {
+        "api_name": "Naranja",
+        "results": [
+            {
+                "address": "14850 SW 280th St, Homestead, FL  33032, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": {
+                    "Fri": "10:00:00–18:00:00",
+                    "Mon": "10:00:00–18:00:00",
+                    "Sat": "10:00:00–18:00:00",
+                    "Wed": "10:00:00–18:00:00",
+                    "closes_soon": 0,
+                    "is_open": 0,
+                    "opens_soon": 0,
+                    "state_switch_time": ""
+                },
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.5062172880611,
+                "links": "",
+                "longitude": -80.43073117733,
+                "phone": "+13052422290",
+                "source": "http://yelp.com/biz/86V40tMbhjJC7xWRoQcDfw",
+                "title": "Miami-Dade Public Library System - Naranja Branch",
+                "url": "https://mdpls.org/branch-naranja"
+            }
+        ]
+    },
+    "North Central": {
+        "api_name": "North Central",
+        "results": [
+            {
+                "address": "9590 NW 27th Ave, Miami, FL  33147, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": {},
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.8617543,
+                "links": "",
+                "longitude": -80.2428548,
+                "phone": "+13056934541",
+                "source": "https://maps.apple.com/place?q=North Central Branch Library&auid=6883998482962759696&address=9590 NW 27th Ave, Miami, FL  33147, United States&ll=25.8617543,-80.2428548",
+                "title": "North Central Branch Library",
+                "url": "https://mdpls.org/branch-north-central"
+            }
+        ]
+    },
+    "North Dade Regional": {
+        "api_name": "North Dade Regional",
+        "results": [
+            {
+                "address": "3151 N University Dr, Coral Springs, FL 33065-5199",
+                "country_code": null,
+                "desc": null,
+                "hours": {},
+                "image": null,
+                "latitude": 26.2701128,
+                "links": null,
+                "longitude": -80.2484428,
+                "phone": "+19543577990",
+                "source": "https://www.tripadvisor.com/Attraction_Review-g34153-d14944278-Reviews-Northwest_Regional_Library-Coral_Springs_Broward_County_Florida.html?m=63959",
+                "title": "Northwest Regional Library",
+                "url": "https://www.broward.org/library/Pages/BranchDetails.aspx?branchInfo=28"
+            }
+        ]
+    },
+    "North Shore": {
+        "api_name": "North Shore",
+        "results": [
+            {
+                "address": "7501 Collins Ave, Miami Beach, FL  33141, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": "",
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.8609215,
+                "links": "",
+                "longitude": -80.1207834,
+                "phone": "+13058645392",
+                "source": "http://yelp.com/biz/BXtwGoWUEcPsrLu3rGzjvw",
+                "title": "Miami-Dade Public Library System - North Shore Branch",
+                "url": "https://mdpls.org/branch-north-shore"
+            }
+        ]
+    },
+    "Northeast Dade – Aventura": {
+        "api_name": "Northeast Dade – Aventura",
+        "results": [
+            {
+                "address": "2930 Aventura Blvd, Miami, FL 33180, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": "",
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.9604619035148,
+                "links": "",
+                "longitude": -80.1426603,
+                "phone": "+13059315512",
+                "source": "http://yelp.com/biz/w2CxOrWnvhMlcx2Agd6EpQ",
+                "title": "Northeast Dade - Aventura Branch Library",
+                "url": "https://mdpls.org/branch-northeast-dade-aventura"
+            }
+        ]
+    },
+    "Opa-locka": {
+        "api_name": "Opa-locka",
+        "results": [
+            {
+                "address": "780 Fisherman St, Unit 140, Opa Locka, FL  33054, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": "",
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.9019874,
+                "links": "",
+                "longitude": -80.2514142,
+                "phone": "+13056881134",
+                "source": "https://maps.apple.com/place?q=Opa-locka Branch Library&auid=14073824537022152444&address=780 Fisherman St, Unit 140, Opa Locka, FL  33054, United States&ll=25.9019874,-80.2514142",
+                "title": "Opa-locka Branch Library",
+                "url": "https://mdpls.org/branch-opa-locka"
+            }
+        ]
+    },
+    "Palm Springs North": {
+        "api_name": "Palm Springs North",
+        "results": [
+            {
+                "address": "217 Cypress Lanes, Palm Springs, FL 33461, United States",
+                "country_code": "US",
+                "desc": "Explore library resources, materials, programs, services, policies, and more.",
+                "hours": {},
+                "image": "",
+                "latitude": 26.6408234,
+                "links": "",
+                "longitude": -80.0960017,
+                "phone": "+15615848200",
+                "source": "http://yelp.com/biz/53YWImPA-Ml3XOW-YupW-g",
+                "title": "Palm Springs Library",
+                "url": "https://www.vpsfl.org/269/Library"
+            }
+        ]
+    },
+    "Palmetto Bay": {
+        "api_name": "Palmetto Bay",
+        "results": [
+            {
+                "address": "17641 Old Cutler Rd, Palmetto Bay, FL  33157, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": {
+                    "Fri": "10:00:00–18:00:00",
+                    "Mon": "10:00:00–18:00:00",
+                    "Sat": "10:00:00–18:00:00",
+                    "Thu": "12:00:00–20:00:00",
+                    "Wed": "12:00:00–20:00:00",
+                    "closes_soon": 0,
+                    "is_open": 0,
+                    "opens_soon": 0,
+                    "state_switch_time": "12:00"
+                },
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.6069531,
+                "links": "",
+                "longitude": -80.3111168,
+                "phone": "+13052321771",
+                "source": "http://yelp.com/biz/M-Y2g-kZlaJv8j5QmdMK-A",
+                "title": "Palmetto Bay Branch Library",
+                "url": "https://mdpls.org/branch-palmetto-bay"
+            }
+        ]
+    },
+    "Pinecrest": {
+        "api_name": "Pinecrest",
+        "results": [
+            {
+                "address": "5835 SW 111th St, Pinecrest, FL 33156, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": {
+                    "Fri": "10:00:00–18:00:00",
+                    "Mon": "12:00:00–20:00:00",
+                    "Sat": "10:00:00–18:00:00",
+                    "Thu": "12:00:00–20:00:00",
+                    "Tue": "10:00:00–18:00:00",
+                    "Wed": "10:00:00–18:00:00",
+                    "closes_soon": 0,
+                    "is_open": 0,
+                    "opens_soon": 0,
+                    "state_switch_time": "12:00"
+                },
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.6686527,
+                "links": "",
+                "longitude": -80.2868229,
+                "phone": "+13056684571",
+                "source": "http://yelp.com/biz/Y3sxpmdvd8ta560CVMcEzQ",
+                "title": "Pinecrest Branch Library",
+                "url": "https://mdpls.org/branch-pinecrest"
+            }
+        ]
+    },
+    "Shenandoah": {
+        "api_name": "Shenandoah",
+        "results": [
+            {
+                "address": "2111 SW 19th St, Miami, FL  33145, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": {
+                    "Mon": "10:00:00–18:00:00",
+                    "Sat": "10:00:00–18:00:00",
+                    "Thu": "10:00:00–18:00:00",
+                    "Tue": "12:00:00–20:00:00",
+                    "Wed": "10:00:00–18:00:00",
+                    "closes_soon": 0,
+                    "is_open": 0,
+                    "opens_soon": 0,
+                    "state_switch_time": "10:00"
+                },
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.7547343457951,
+                "links": "",
+                "longitude": -80.2286166165579,
+                "phone": "+13052504688",
+                "source": "http://yelp.com/biz/zvW5_b6Yhn8pJLibYNiQqg",
+                "title": "Shenandoah Branch Library",
+                "url": "https://mdpls.org/branch-shenandoah"
+            }
+        ]
+    },
+    "South Dade Regional": {
+        "api_name": "South Dade Regional",
+        "results": [
+            {
+                "address": "2455 NW 183rd St, Miami Gardens, FL  33056, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": {
+                    "Fri": "09:00:00–18:00:00",
+                    "Mon": "09:00:00–18:00:00",
+                    "Thu": "09:00:00–18:00:00",
+                    "Tue": "09:00:00–18:00:00",
+                    "Wed": "09:00:00–18:00:00",
+                    "closes_soon": 0,
+                    "is_open": 0,
+                    "opens_soon": 0,
+                    "state_switch_time": "09:00"
+                },
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.9417132,
+                "links": "",
+                "longitude": -80.2423821,
+                "phone": "+13056256424",
+                "source": "http://yelp.com/biz/4uK6-G0_GRWiSNSZza4nJQ",
+                "title": "North Dade Regional Library",
+                "url": "https://mdpls.org/branch-north-dade-regional"
+            }
+        ]
+    },
+    "South Miami": {
+        "api_name": "South Miami",
+        "results": [
+            {
+                "address": "131 Alton Rd, Miami Beach, FL  33139, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": {
+                    "Mon": "10:00:00–18:00:00",
+                    "Sat": "10:00:00–18:00:00",
+                    "Thu": "10:00:00–18:00:00",
+                    "Tue": "10:00:00–18:00:00",
+                    "Wed": "12:00:00–20:00:00",
+                    "closes_soon": 0,
+                    "is_open": 0,
+                    "opens_soon": 0,
+                    "state_switch_time": "10:00"
+                },
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.7704061,
+                "links": "",
+                "longitude": -80.1377641,
+                "phone": "+13055354223",
+                "source": "http://yelp.com/biz/Dhnq2DxwFhHG7Bg0O4RNtQ",
+                "title": "South Shore Branch Library",
+                "url": "https://mdpls.org/branch-south-shore"
+            }
+        ]
+    },
+    "South Shore": {
+        "api_name": "South Shore",
+        "results": [
+            {
+                "address": "131 Alton Rd, Miami Beach, FL  33139, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": {
+                    "Mon": "10:00:00–18:00:00",
+                    "Sat": "10:00:00–18:00:00",
+                    "Thu": "10:00:00–18:00:00",
+                    "Tue": "10:00:00–18:00:00",
+                    "Wed": "12:00:00–20:00:00",
+                    "closes_soon": 0,
+                    "is_open": 0,
+                    "opens_soon": 0,
+                    "state_switch_time": "10:00"
+                },
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.7704061,
+                "links": "",
+                "longitude": -80.1377641,
+                "phone": "+13055354223",
+                "source": "http://yelp.com/biz/Dhnq2DxwFhHG7Bg0O4RNtQ",
+                "title": "South Shore Branch Library",
+                "url": "https://mdpls.org/branch-south-shore"
+            }
+        ]
+    },
+    "Sunny Isles Beach": {
+        "api_name": "Sunny Isles Beach",
+        "results": [
+            {
+                "address": "10800 Collins Avenue, Sunny Isles Beach, FL 33154-1006",
+                "country_code": null,
+                "desc": null,
+                "hours": {},
+                "image": null,
+                "latitude": 25.9091173368813,
+                "links": null,
+                "longitude": -80.1211559772491,
+                "phone": "+13059473525",
+                "source": "https://www.tripadvisor.com/Attraction_Review-g552080-d274006-Reviews-Haulover_Beach_Park-Sunny_Isles_Beach_Florida.html?m=63959",
+                "title": "Haulover Beach Park",
+                "url": "https://www.hauloverbeach.org"
+            }
+        ]
+    },
+    "Sunset": {
+        "api_name": "Sunset",
+        "results": [
+            {
+                "address": "10855 SW 72nd St, Unit 13, Miami, FL  33173, United States",
+                "country_code": "US",
+                "desc": null,
+                "hours": "",
+                "image": null,
+                "latitude": 25.7027063,
+                "links": null,
+                "longitude": -80.3693555,
+                "phone": "+13052706368",
+                "source": "http://yelp.com/biz/SkQ9oQ0xEJ-55PdMQ6j65w",
+                "title": "Miami‑Dade Public Library",
+                "url": "https://mdpls.org/branch-sunset"
+            }
+        ]
+    },
+    "Tamiami": {
+        "api_name": "Tamiami",
+        "results": [
+            {
+                "address": "2001 N Tamiami Trail, North Fort Myers, FL  33903, United States",
+                "country_code": "US",
+                "desc": null,
+                "hours": {
+                    "Fri": "09:00:00–17:00:00",
+                    "Mon": "10:00:00–18:00:00",
+                    "Sat": "09:00:00–17:00:00",
+                    "Thu": "10:00:00–18:00:00",
+                    "Tue": "12:00:00–20:00:00",
+                    "Wed": "10:00:00–18:00:00",
+                    "closes_soon": 0,
+                    "is_open": 0,
+                    "opens_soon": 0,
+                    "state_switch_time": "10:00"
+                },
+                "image": null,
+                "latitude": 26.6880476,
+                "links": null,
+                "longitude": -81.8865564,
+                "phone": "+12395334320",
+                "source": "http://yelp.com/biz/gCUXabiumGGbC0pSdpbQvA",
+                "title": "North Fort Myers Public Library",
+                "url": "https://www.leegov.com/library/branches/nf"
+            }
+        ]
+    },
+    "Virrick Park": {
+        "api_name": "Virrick Park",
+        "results": [
+            {
+                "address": "600 5th Street South, St. Petersburg, FL 33701",
+                "country_code": null,
+                "desc": null,
+                "hours": {
+                    "Fri": "11:00:00–21:00:00",
+                    "Mon": "11:00:00–21:00:00",
+                    "Sat": "09:00:00–21:00:00",
+                    "Sun": "09:00:00–16:00:00",
+                    "Thu": "11:00:00–21:00:00",
+                    "Tue": "11:00:00–21:00:00",
+                    "Wed": "11:00:00–21:00:00",
+                    "closes_soon": 0,
+                    "is_open": 0,
+                    "opens_soon": 0,
+                    "state_switch_time": "11:00"
+                },
+                "image": null,
+                "latitude": 27.7638931971226,
+                "links": null,
+                "longitude": -82.6396322250366,
+                "phone": "+17273699969",
+                "source": "https://www.tripadvisor.com/Restaurant_Review-g34607-d15248289-Reviews-The_Library-St_Petersburg_Florida.html?m=63959",
+                "title": "The Library",
+                "url": "https://thelibrarystpete.com"
+            }
+        ]
+    },
+    "West Flagler": {
+        "api_name": "West Flagler",
+        "results": [
+            {
+                "address": "5050 W Flagler St, Miami, FL 33134, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": "",
+                "image": "https://static.libnet.info/frontend-images/editor/mdpls/apple-app-store-logo.png",
+                "latitude": 25.7709481433915,
+                "links": "",
+                "longitude": -80.2773463726044,
+                "phone": "+13054428710",
+                "source": "http://yelp.com/biz/LrxfQJeA9XgqzG8l-VtzhA",
+                "title": "Miami‑Dade Public Library",
+                "url": "https://www.mdpls.org/branch-west-flagler"
+            }
+        ]
+    },
+    "West Kendall Regional": {
+        "api_name": "West Kendall Regional",
+        "results": [
+            {
+                "address": "239 N Spring St, Pensacola, FL  32502, United States",
+                "country_code": "US",
+                "desc": null,
+                "hours": "",
+                "image": null,
+                "latitude": 30.4154589418632,
+                "links": null,
+                "longitude": -87.2191500663757,
+                "phone": "+18504365060",
+                "source": "http://yelp.com/biz/ljpqbHp05k9i8bhcG9Ub1A",
+                "title": "West Florida Public Libraries- WFPL",
+                "url": "https://www.facebook.com/westfloridapubliclibraries/"
+            }
+        ]
+    },
+    "Westchester Health & Wellness Information Center": {
+        "api_name": "Westchester Health & Wellness Information Center",
+        "results": [
+            {
+                "address": "11760 W Sample Rd, Coral Springs, FL  33065, United States",
+                "country_code": "US",
+                "desc": null,
+                "hours": {
+                    "Fri": "09:00:00–18:00:00",
+                    "Mon": "09:00:00–18:00:00",
+                    "Thu": "09:00:00–18:00:00",
+                    "Tue": "09:00:00–18:00:00",
+                    "Wed": "09:00:00–18:00:00",
+                    "closes_soon": 0,
+                    "is_open": 0,
+                    "opens_soon": 0,
+                    "state_switch_time": "09:00"
+                },
+                "image": null,
+                "latitude": 26.27174,
+                "links": null,
+                "longitude": -80.283823,
+                "phone": "+19543455644",
+                "source": "https://maps.apple.com/place?q=Center for Psychological Wellness&auid=6200035223036664513&address=11760 W Sample Rd, Coral Springs, FL  33065, United States&ll=26.27174,-80.283823",
+                "title": "Center for Psychological Wellness",
+                "url": "http://www.psychwell.com"
+            }
+        ]
+    },
+    "Westchester Regional": {
+        "api_name": "Westchester Regional",
+        "results": [
+            {
+                "address": "9445 SW 24th St, Miami, FL  33165, United States",
+                "country_code": "US",
+                "desc": "",
+                "hours": "",
+                "image": "https://photos.plugshare.com/photos/969711.jpg",
+                "latitude": 25.748257,
+                "links": "",
+                "longitude": -80.347626,
+                "phone": "",
+                "source": "https://maps.apple.com/place?q=Westchester Regional Library&auid=4373410282402751996&address=9445 SW 24th St, Miami, FL  33165, United States&ll=25.748257,-80.347626",
+                "title": "Westchester Regional Library",
+                "url": "https://www.plugshare.com/location/453352"
+            }
+        ]
+    }
+}

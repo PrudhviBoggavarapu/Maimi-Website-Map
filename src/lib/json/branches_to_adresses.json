@@ -1,0 +1,260 @@
+[
+    {
+        "name": "Allapattah",
+        "address": "1799 NW 35 St. Miami, FL",
+        "zip": "33142",
+        "phone": "305-638-6086"
+    },
+    {
+        "name": "Arcola Lakes",
+        "address": "8240 NW 7 Ave. Miami, FL",
+        "zip": "33150",
+        "phone": "305-694-2707"
+    },
+    {
+        "name": "Bay Harbor Islands",ss
+        "address": "1175 95 St. Bay Harbor Islands, FL",
+        "zip": "33154",
+        "phone": "786-582-2620"
+    },
+    {
+        "name": "California Club",
+        "address": "700 Ives Dairy Rd. Miami, FL",
+        "zip": "33179",
+        "phone": "305-770-3161"
+    }, {
+        "name": "Civic Center",
+        "address": "1501 NW 12 Ave. Miami, FL 33136 Metrorail Civic Center",
+        "zip": "Station",
+        "phone": "305-324-0291"
+    }, {
+        "name": "Coconut Grove",
+        "address": "2875 McFarlane Rd. Miami, FL",
+        "zip": "33133",
+        "phone": "305-442-8695"
+    }, {
+        "name": "Concord",
+        "address": "3882 SW 112 Ave. Miami, FL",
+        "zip": "33165",
+        "phone": "305-207-1344"
+    }, {
+        "name": "Coral Gables",
+        "address": "3443 Segovia St. Coral Gables, FL",
+        "zip": "33134",
+        "phone": "305-442-8706"
+    }, {
+        "name": "Coral Gables(Temporary Location)",
+        "address": "308 Miracle Mile Coral Gables, FL",
+        "zip": "33134",
+        "phone": "305-442-8706"
+    }, {
+        "name": "Coral Reef",
+        "address": "9211 SW 152 St. Miami, FL",
+        "zip": "33157",
+        "phone": "305-233-8324"
+    }, {
+        "name": "Country Walk",
+        "address": "15433 SW 137 Ave. Miami, FL",
+        "zip": "33177",
+        "phone": "786-293-4577"
+    }, {
+        "name": "Culmer/Overtown",
+        "address": "350 NW 13 St. Miami, FL",
+        "zip": "33136",
+        "phone": "305-579-5322"
+    }, {
+        "name": "Doral",
+        "address": "8551 NW 53 St. #A107 Doral, FL",
+        "zip": "33166",
+        "phone": "305-716-9598"
+    }, {
+        "name": "Edison Center",
+        "address": "531 NW 62 St. Miami, FL",
+        "zip": "33150",
+        "phone": "305-757-0668"
+    }, {
+        "name": "Fairlawn",
+        "address": "6376 SW 8 St. West Miami, FL",
+        "zip": "33144",
+        "phone": "305-261-1571"
+    }, {
+        "name": "Golden Glades",
+        "address": "100 NE 166 St. Miami, FL",
+        "zip": "33162",
+        "phone": "305-787-1544"
+    }, {
+        "name": "Hialeah Gardens",
+        "address": "13451 NW 107 Ave. Hialeah Gardens, FL",
+        "zip": "33018",
+        "phone": "305-820-8520"
+    }, {
+        "name": "Hispanic",
+        "address": "1398 SW 1 St. Miami, FL",
+        "zip": "33135",
+        "phone": "305-643-8574"
+    }, {
+        "name": "International Mall",
+        "address": "10315 NW 12 St. Doral, FL",
+        "zip": "33172",
+        "phone": "305-594-2514"
+    }, {
+        "name": "Kendale Lakes",
+        "address": "15205 SW 88 St. Miami, FL",
+        "zip": "33196",
+        "phone": "305-388-0326"
+    }, {
+        "name": "Kendall",
+        "address": "9101 SW 97 Ave. Miami, FL",
+        "zip": "33176",
+        "phone": "305-279-0520"
+    }, {
+        "name": "Key Biscayne",
+        "address": "299 Crandon Blvd. Key Biscayne, FL",
+        "zip": "33149",
+        "phone": "305-361-6134"
+    }, {
+        "name": "Lakes of the Meadow",
+        "address": "4284 SW 152 Ave. Miami, FL",
+        "zip": "33185",
+        "phone": "305-222-2149"
+    }, {
+        "name": "Lemon City",
+        "address": "430 NE 61 St. Miami, FL",
+        "zip": "33137",
+        "phone": "305-757-0662"
+    }, {
+        "name": "Little River",
+        "address": "160 NE 79 St. Miami, FL",
+        "zip": "33138",
+        "phone": "305-751-8689"
+    }, {
+        "name": "Main Library",
+        "address": "101 W Flagler St. Miami, FL",
+        "zip": "33130",
+        "phone": "305-375-2665"
+    }, {
+        "name": "Miami Beach Regional",
+        "address": "227 22nd St. Miami Beach, FL",
+        "zip": "33139",
+        "phone": "305-535-4219"
+    }, {
+        "name": "Miami Lakes",
+        "address": "6699 Windmill Gate Rd. Miami Lakes, FL",
+        "zip": "33014",
+        "phone": "305-822-6520"
+    }, {
+        "name": "Miami Springs",
+        "address": "401 Westward Dr. Miami Springs, FL",
+        "zip": "33166",
+        "phone": "305-805-3811"
+    }, {
+        "name": "Model City",
+        "address": "2211 NW 54 St. Miami, FL",
+        "zip": "33142",
+        "phone": "305-636-2233"
+    }, {
+        "name": "Naranja",
+        "address": "14850 SW 280 St. Miami, FL",
+        "zip": "33032",
+        "phone": "305-242-2290"
+    }, {
+        "name": "North Central",
+        "address": "9590 NW 27 Ave. Miami, FL",
+        "zip": "33147",
+        "phone": "305-693-4541"
+    }, {
+        "name": "North Dade Regional",
+        "address": "2455 NW 183 St. Miami Gardens, FL",
+        "zip": "33056",
+        "phone": "305-625-6424"
+    }, {
+        "name": "North Shore",
+        "address": "7501 Collins Ave. Miami Beach, FL",
+        "zip": "33141",
+        "phone": "305-864-5392"
+    }, {
+        "name": "Northeast Dade – Aventura",
+        "address": "2930 Aventura Blvd. Aventura, FL 33180",
+        "phone": "305-931-5512"
+    }, {
+        "name": "Opa-locka",
+        "address": "780 Fisherman St., Suite 140 Opa-locka, FL",
+        "zip": "33054",
+        "phone": "305-688-1134"
+    }, {
+        "name": "Palm Springs North",
+        "address": "17601 NW 78 Ave., Suite 111 Hialeah, FL",
+        "zip": "33015",
+        "phone": "305-820-8564"
+    }, {
+        "name": "Palmetto Bay",
+        "address": "17641 Old Cutler Rd. Palmetto Bay, FL",
+        "zip": "33157",
+        "phone": "305-232-1771"
+    }, {
+        "name": "Pinecrest",
+        "address": "5835 SW 111 St. Pinecrest, FL",
+        "zip": "33156",
+        "phone": "305-668-4571"
+    }, {
+        "name": "Shenandoah",
+        "address": "2111 SW 19 St. Miami, FL",
+        "zip": "33145",
+        "phone": "305-250-4688"
+    }, {
+        "name": "South Dade Regional",
+        "address": "10750 SW 211 St. Cutler Bay, FL",
+        "zip": "33189",
+        "phone": "305-233-8140"
+    }, {
+        "name": "South Miami",
+        "address": "6000 Sunset Dr. South Miami, FL",
+        "zip": "33143",
+        "phone": "305-667-6121"
+    }, {
+        "name": "South Shore",
+        "address": "131 Alton Rd. Miami Beach, FL",
+        "zip": "33139",
+        "phone": "305-535-4223"
+    }, {
+        "name": "Sunny Isles Beach",
+        "address": "18070 Collins Ave. Sunny Isles Beach, FL",
+        "zip": "33160",
+        "phone": "305-682-0726"
+    }, {
+        "name": "Sunset",
+        "address": "10855 SW 72 St. #13-14 Miami, FL",
+        "zip": "33173",
+        "phone": "305-270-6368"
+    }, {
+        "name": "Tamiami",
+        "address": "12700 SW 8 St. Miami, FL",
+        "zip": "33184",
+        "phone": "305-223-4758"
+    }, {
+        "name": "Virrick Park",
+        "address": "3255 Plaza St. Miami, FL",
+        "zip": "33133",
+        "phone": "305-442-7872"
+    }, {
+        "name": "West Flagler",
+        "address": "5050 W Flagler St. Miami, FL",
+        "zip": "33134",
+        "phone": "305-442-8710"
+    }, {
+        "name": "West Kendall Regional",
+        "address": "10201 Hammocks Blvd. Miami, FL",
+        "zip": "33196",
+        "phone": "305-385-7135"
+    }, {
+        "name": "Westchester Health & Wellness Information Center",
+        "address": "9445 Coral Way Miami, FL",
+        "zip": "33165",
+        "phone": "786-584-4100"
+    }, {
+        "name": "Westchester Regional",
+        "address": "9445 Coral Way Miami, FL",
+        "zip": "33165",
+        "phone": "305-553-1134"
+    }
+]
