@@ -50,31 +50,40 @@
 			Count: {$responseData?.available.length}
 		</label>
 		{#if $dataLoaded}
-			<label
+			<button
+				on:click={() => {
+					dataLoaded.set(false);
+					//@ts-ignore
+					selectedMuseum.set(selectedMuseumLocal);
+				}}
 				for="museum-select"
 				class="text-gray-700 font-bold bg-white border border-gray-300 hover:border-gray-400 ml-4"
 			>
 				LOADED
-			</label>
+			</button>
 		{:else}
-			<label
+			<button
+				on:click={() => {
+					dataLoaded.set(false);
+					//@ts-ignore
+					selectedMuseum.set(selectedMuseumLocal);
+				}}
 				for="museum-select"
 				class="text-gray-700 font-bold bg-white border border-gray-300 hover:border-gray-400 ml-4"
 			>
 				LOADING
-			</label>
+			</button>
 		{/if}
-		<button
+		<!-- <button
 			on:click={() => {
 				dataLoaded.set(false);
 				//@ts-ignore
 				selectedMuseum.set(selectedMuseumLocal);
-				console.log('EHURHUE', selectedMuseumLocal);
 			}}
 			class="rounded-lg bg-black text-white ml-4"
 		>
 			Click Here To Map
-		</button>
+		</button> -->
 	</div>
 
 	<Map></Map>

@@ -90,7 +90,6 @@ export const isDarkReaderEnabled = writable(false)
 
 export async function get_api_and_store(url: RequestInfo |URL) {
     if (get(dataLoaded)) {
-        console.log('Data already loaded.');
         return;
     }
 

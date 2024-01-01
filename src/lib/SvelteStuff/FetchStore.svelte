@@ -8,7 +8,6 @@
 		await lib.default();
 
 		await selectedMuseum.subscribe((storeValue) => {
-			console.log('GET URL', storeValue);
 			if (storeValue) {
 				const url = `https://na.iiivega.com/api/search-result/drawer/format-groups/${storeValue.id}/locations?tab=Museum%20Pass`;
 				let x = get_api_and_store(url);

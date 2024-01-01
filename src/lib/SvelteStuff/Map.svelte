@@ -61,8 +61,6 @@
 		);
 
 		cleanData.subscribe((value) => {
-			console.log('MAPPING DATA HERE', value);
-
 			map.eachLayer(function (layer) {
 				if (layer instanceof L.Marker) {
 					map.removeLayer(layer);
