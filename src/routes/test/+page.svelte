@@ -1,10 +1,24 @@
 <script lang="ts">
 	import DetectDarkReader from '$lib/SvelteStuff/DetectDarkReader.svelte';
 	import { isDarkReaderEnabled } from '$lib/shared/stores';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		const currentColor = localStorage.getItem('SawWelcome');
+		console.log(currentColor);
+	});
 </script>
 
 <!-- The UI part of your component -->
 <div>
 	Dark Reader is {$isDarkReaderEnabled ? 'enabled' : 'disabled'}.
 	<DetectDarkReader />
+
+	<button
+		class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
+		on:click={() => {
+			localStorage.removeItem('SawWelcome');
+		}}
+		>CLEAR CACHE
+	</button>
 </div>

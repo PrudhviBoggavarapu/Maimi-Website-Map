@@ -6,6 +6,7 @@
 	import { isDarkReaderEnabled, type Museum } from '$lib/shared/stores';
 	import DetectDarkReader from '$lib/SvelteStuff/DetectDarkReader.svelte';
 	import Header from '$lib/SvelteStuff/Header.svelte';
+	import { goto } from '$app/navigation';
 
 	onMount(async () => {
 		isDarkReaderEnabled.subscribe((value) => {
@@ -15,6 +16,10 @@
 				document.body.classList.remove('dark');
 			}
 		});
+
+		if (localStorage.getItem('SawWelcome') !== 'true') {
+			goto('/welcome');
+		}
 
 		let lib: typeof import('$lib/wasm-lib/pkg/wasm_lib');
 		lib = await import('$lib/wasm-lib/pkg/wasm_lib');
@@ -26,7 +31,7 @@
 <html lang="en">
 	<div class="flex flex-col w-full h-screen">
 		<Header />
-		
+
 		<div class="flex-grow w-full">
 			<Map></Map>
 		</div>
