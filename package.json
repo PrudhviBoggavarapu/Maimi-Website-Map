@@ -44,7 +44,6 @@
     "type": "module",
     "dependencies": {
         "bits-ui": "^0.12.0",
-        "flowbite-svelte-icons": "^0.4.5",
-        "svelte-select": "^5.8.1"
+        "flowbite-svelte-icons": "^0.4.5"
     }
 }

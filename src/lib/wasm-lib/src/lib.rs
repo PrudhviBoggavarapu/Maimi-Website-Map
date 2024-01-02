@@ -3,7 +3,7 @@ use fuzzy_matcher::FuzzyMatcher;
 use serde::{Deserialize, Serialize};
 use serde_json;
 use wasm_bindgen::prelude::*;
-use wasm_bindgen_test::*;
+
 use web_sys;
 
 #[allow(dead_code)]
