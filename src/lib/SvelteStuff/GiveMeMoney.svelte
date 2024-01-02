@@ -12,12 +12,11 @@
 	<input
 		type="image"
 		src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
-		border="0"
 		name="submit"
 		title="PayPal - The safer, easier way to pay online!"
 		alt="Donate with PayPal button"
 	/>
-	<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+	<img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
 </form>
 <a
 	href="https://www.paypal.com/donate/?business=ELLZMYLNSMKXE&no_recurring=0&item_name=Buy+me+a+coffee+to+keep+the+website+going&currency_code=USD"

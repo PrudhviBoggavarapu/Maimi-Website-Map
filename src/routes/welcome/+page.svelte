@@ -15,21 +15,19 @@
 			<!-- Adjusted width for larger screens -->
 			<p class="text-lg">
 				Here you can find a pass for many of the museums in the Miami-Dade area. The pass grants
-				free entry into the museums. You must physically go to the library to pick up a pass.
+				free entry into the museums. You must physically go to the library to check out a pass.
 			</p>
 
 			<p class="text-lg mt-4">
-				Start by picking a museum and clicking the loading button. It will display the available
-				passes on a map. This website requests your location to show a pin where you are.
+				Start by picking a museum from the dropdown, then click the load button. It will display the
+				libraies that have that pass available. This website requests your location to show a pin
+				where you are. We do not collect your data.
 			</p>
 
-			<script src="https://liberapay.com/CodingPabs/widgets/button.js"></script>
+			<script src="/button.js"></script>
 			<noscript
 				><a href="https://liberapay.com/CodingPabs/donate"
-					><img
-						alt="Donate using Liberapay"
-						src="https://liberapay.com/assets/widgets/donate.svg"
-					/></a
+					><img alt="Donate using Liberapay" src="/donateLibre.svg" /></a
 				></noscript
 			>
 			<br />
@@ -40,12 +38,10 @@
 			<h2 class="text-xl font-semibold mb-3">How the Pass Works</h2>
 			<ul class="list-disc list-inside mb-4 text-left">
 				<li>Pass is good for up to a family of four.</li>
-				<li>Pass is good for one visit.</li>
-				<li>Pass is not renewable or available for reserve, i.e., no holding passes.</li>
-				<li>
-					Pass is valid for seven days from the time of check-out and will remain on the customer's
-					record for the duration of the seven-day checkout.
-				</li>
+				<li>Pass is good for only one visit.</li>
+				<li>Pass is not renewable or available for reserve.</li>
+				<li>Pass is valid for seven days from the time of check-out</li>
+				<li>Pass will remain on the customer's record for the duration of the checkout.</li>
 				<li>Passes are available on a first-come, first-served basis.</li>
 				<li>Only one pass may be checked out at a time.</li>
 				<li>Limited number of passes per branch.</li>
