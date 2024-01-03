@@ -4,7 +4,7 @@
 <br />
 <br />
 <br />
-<form action="https://www.paypal.com/donate" method="post" target="_top">
+<form action="https://www.paypal.com/donate" method="post" target="_top" class="mb-6">
 	<input type="hidden" name="business" value="ELLZMYLNSMKXE" />
 	<input type="hidden" name="no_recurring" value="0" />
 	<input type="hidden" name="item_name" value="Buy me a coffee to keep the website going" />
@@ -20,5 +20,5 @@
 </form>
 <a
 	href="https://www.paypal.com/donate/?business=ELLZMYLNSMKXE&no_recurring=0&item_name=Buy+me+a+coffee+to+keep+the+website+going&currency_code=USD"
-	>Link if broken</a
+	>Link if donate button is broken</a
 >

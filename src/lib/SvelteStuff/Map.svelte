@@ -13,6 +13,7 @@
 	let L: typeof import('leaflet');
 
 	type LeafletType = typeof L;
+	let isLoading = true;
 
 	let map: Map | LayerGroup<any>;
 	/**
@@ -42,6 +43,10 @@
 			className:
 				'filter dark:brightness-60 dark:invert dark:contrast-300 dark:saturate-30 dark:custom-hue-rotate dark:custom-brightness flex-grow w-full h-full	'
 		}).addTo(map);
+
+		await map.on('layeradd', function () {
+			isLoading = false;
+		});
 
 		getCurrentLocation();
 		var customIcon = L.icon({
@@ -90,4 +95,12 @@
 </script>
 
 <CleanData></CleanData>
-<div bind:this={mapContainer} class="w-full h-full"></div>
+<div bind:this={mapContainer} class="w-full h-full">
+	{#if isLoading}
+		<div
+			class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-white bg-opacity-80 p-2 rounded"
+		>
+			Loading...
+		</div>
+	{/if}
+</div>
