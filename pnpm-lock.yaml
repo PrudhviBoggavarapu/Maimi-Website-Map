@@ -13,6 +13,12 @@ dependencies:
     version: 0.4.5(svelte@4.2.7)(tailwind-merge@2.2.0)(tailwindcss@3.4.0)
 
 devDependencies:
+  '@skeletonlabs/skeleton':
+    specifier: ^2.7.0
+    version: 2.7.0(svelte@4.2.7)
+  '@skeletonlabs/tw-plugin':
+    specifier: ^0.3.1
+    version: 0.3.1(tailwindcss@3.4.0)
   '@sveltejs/adapter-auto':
     specifier: ^3.0.0
     version: 3.0.0(@sveltejs/kit@2.0.0)
@@ -1817,6 +1823,23 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@skeletonlabs/skeleton@2.7.0(svelte@4.2.7):
+    resolution: {integrity: sha512-XD6aCvEQYp2LtEKM9OelK2HoJZFraM3fvpQpXsnNY82t/QeaZ9WkORCsrVz91puq786FTOktt8beZEe045YLWA==}
+    peerDependencies:
+      svelte: ^3.56.0 || ^4.0.0
+    dependencies:
+      esm-env: 1.0.0
+      svelte: 4.2.7
+    dev: true
+
+  /@skeletonlabs/tw-plugin@0.3.1(tailwindcss@3.4.0):
+    resolution: {integrity: sha512-DjjeOHN3HhFQf6gYPT2MUZMkIdw1jeB9mbuKC8etQxUlOR4XitfC7hssRWFJ8RJsvrrN0myCBbdWkVG1JVA96g==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0'
+    dependencies:
+      tailwindcss: 3.4.0
+    dev: true
 
   /@surma/rollup-plugin-off-main-thread@2.2.3:
     resolution: {integrity: sha512-lR8q/9W7hZpMWweNiAKU7NQerBnzQQLvi8qnTDU/fxItPhtZVMbPV3lbCwjhIlNBe9Bbr5V+KHshvWmVSG9cxQ==}
