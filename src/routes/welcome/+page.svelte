@@ -5,9 +5,10 @@
 
 <div class="mx-auto p-4 max-w-7xl">
 	<!-- Adjusted max-width -->
-	<h1 class="text-2xl font-bold text-center mb-6">
-		Welcome to the Free Museum Pass Program from the Miami-Dade Public Library System
-	</h1>
+	<div>
+		<h1 class="text-2xl font-bold text-center mb-2">Welcome to the Free Museum Pass Program</h1>
+		<h2 class="text-1xl font-bold text-center mb-6">from the Miami-Dade Public Library System</h2>
+	</div>
 
 	<div class="flex flex-col lg:flex-row">
 		<!-- 'lg:flex-row' for larger screens -->
@@ -19,9 +20,14 @@
 			</p>
 
 			<p class="text-lg mt-4">
-				Start by picking a museum from the dropdown, then click the load button. It will display the
-				libraies that have that pass available. This website requests your location to show a pin
-				where you are. We do not collect your data.
+				Start by picking a museum from the dropdown, then click the load button. This will display
+				the libraies that have that a pass available.
+			</p>
+
+			<p class="text-lg mt-4">
+				This website requests your location to place a pin where you are. <strong>
+					We do not collect your data.
+				</strong>
 			</p>
 
 			<script src="/button.js"></script>
@@ -34,9 +40,9 @@
 			<br />
 		</div>
 
-		<div class="lg:w-1/2 lg:pl-4 overflow-auto">
+		<div class="lg:w-7/12 lg:pl-4 overflow-auto">
 			<h2 class="text-xl font-semibold mb-3">How the Pass Works</h2>
-			<ul class="list-disc list-inside mb-4 text-left">
+			<ul class="list-disc list-inside ml-5 mb-4 text-left">
 				<li>Pass is good for up to a family of four.</li>
 				<li>Pass is good for only one visit.</li>
 				<li>Pass is not renewable or available for reserve.</li>

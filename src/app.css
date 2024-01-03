@@ -12,35 +12,39 @@
 /* Add this in a CSS file, e.g., styles.css */
 @font-face {
   font-family: 'Comfortaa';
-  src: url('/fonts/Comfortaa-Regular.ttf') format('truetype');
+  src: url('/fonts/static/Comfortaa-Regular.ttf') format('truetype');
   font-weight: 400; /* Normal */
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Comfortaa';
-  src: url('/fonts/Comfortaa-Bold.ttf') format('truetype');
+  src: url('/fonts/static/Comfortaa-Bold.ttf') format('truetype');
   font-weight: 700; /* Bold */
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Comfortaa';
-  src: url('/fonts/Comfortaa-Light.ttf') format('truetype');
+  src: url('/fonts/static/Comfortaa-Light.ttf') format('truetype');
   font-weight: 300; /* Light */
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Comfortaa';
-  src: url('/fonts/Comfortaa-Medium.ttf') format('truetype');
+  src: url('/fonts/static/Comfortaa-Medium.ttf') format('truetype');
   font-weight: 500; /* Medium */
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Comfortaa';
-  src: url('/fonts/Comfortaa-SemiBold.ttf') format('truetype');
+  src: url('/fonts/static/Comfortaa-SemiBold.ttf') format('truetype');
   font-weight: 600; /* SemiBold */
   font-style: normal;
+}
+
+body {
+  font-family: 'Comfortaa', sans-serif;
 }
