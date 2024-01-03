@@ -2,16 +2,14 @@ import type {Location}
 from '$lib/wasm-lib/pkg/wasm_lib';
 import {get, writable} from 'svelte/store';
 import type {Writable}
-
 from 'svelte/store';
-
 export const cleanData: Writable<Location[] | null> = writable(null);
-
-
 export const responseData: Writable<StoreData | null> = writable(null);
 export const loading = writable(false);
 export const error = writable(null);
 export const dataLoaded = writable(false);
+export const isMapLoading = writable(true);
+
 export interface LocationItem {
     code: string;
     label: string;
@@ -82,11 +80,8 @@ export const museums: Museum[] = [
     }
 ];
 
-
 export const selectedMuseum: Writable<Museum> = writable(museums[0]);
-
-export const isDarkReaderEnabled = writable(false)
-
+export const isDarkReaderEnabled = writable(false);
 
 export async function get_api_and_store(url: RequestInfo |URL) {
     if (get(dataLoaded)) {
@@ -126,8 +121,7 @@ export async function get_api_and_store(url: RequestInfo |URL) {
     responseData.set(data);
     dataLoaded.set(true);
     return data;
-}
-
+};
 export function createGoogleMapsURL(address: string) { // Encode the address
     var encodedAddress = encodeURIComponent(address);
 
@@ -135,7 +129,7 @@ export function createGoogleMapsURL(address: string) { // Encode the address
     var googleMapsURL = "https://www.google.com/maps/search/?api=1&query=" + encodedAddress;
 
     return googleMapsURL;
-}
+};
 export function getCurrentLocation() { // Check if Geolocation is supported
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
@@ -143,11 +137,9 @@ export function getCurrentLocation() { // Check if Geolocation is supported
         console.log("Geolocation is not supported by this browser.");
     }
 }
-
 export function showPosition(position: any) {
     console.log("Latitude: " + position.coords.latitude + "\nLongitude: " + position.coords.longitude);
 }
-
 export function showError(error: any) {
     switch (error.code) {
         case error.PERMISSION_DENIED:

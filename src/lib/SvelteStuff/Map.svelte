@@ -7,13 +7,14 @@
 		cleanData,
 		createGoogleMapsURL,
 		getCurrentLocation,
-		responseData
+		isMapLoading,
+		dataLoaded
 	} from '../shared/stores';
 	import CleanData from './CleanData.svelte';
+	import { Circle3 } from 'svelte-loading-spinners';
 	let L: typeof import('leaflet');
 
 	type LeafletType = typeof L;
-	let isLoading = true;
 
 	let map: Map | LayerGroup<any>;
 	/**
@@ -46,18 +47,18 @@
 
 		await map.on('layeradd', function (e) {
 			// If added layer is currently loading, spin !
-			if (e.layer.loading) isLoading = true;
+			if (e.layer.loading) isMapLoading.set(true);
 			if (typeof e.layer.on !== 'function') return;
 			e.layer.on('data:loading', function () {
-				isLoading = true;
+				isMapLoading.set(true);
 			});
 			e.layer.on('data:loaded', function () {
-				isLoading = false;
+				isMapLoading.set(false);
 			});
-		});	
+		});
 		await map.on('layerremove', function (e) {
 			// Clean-up
-			if (e.layer.loading) isLoading = true;
+			if (e.layer.loading) isMapLoading.set(true);
 			if (typeof e.layer.on !== 'function') return;
 			e.layer.off('data:loaded');
 			e.layer.off('data:loading');
@@ -111,11 +112,11 @@
 
 <CleanData></CleanData>
 <div bind:this={mapContainer} class="w-full h-full">
-	{#if isLoading}
+	{#if !($isMapLoading && $dataLoaded)}
 		<div
-			class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-white bg-opacity-80 p-2 rounded"
-		>
-			Loading...
+			class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 p-2 rounded"
+		>	
+			<Circle3 size="100" unit="px" duration="2s" />
 		</div>
 	{/if}
 </div>
