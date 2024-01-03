@@ -59,13 +59,12 @@
 				* Zoo Miami family of four is two adults and two children ages 3-12.
 			</p>
 			<a href="https://mdpls.org/museum-pass" class="underline">Official website</a>
-			<br /><br /><br />
 		</div>
 	</div>
 
 	<div class="flex justify-center items-center flex-col">
 		<button
-			class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
+			class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg m-6"
 			on:click={() => {
 				localStorage.setItem('SawWelcome', 'true');
 				goto('/');
