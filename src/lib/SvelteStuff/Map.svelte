@@ -44,8 +44,23 @@
 				'filter dark:brightness-60 dark:invert dark:contrast-300 dark:saturate-30 dark:custom-hue-rotate dark:custom-brightness flex-grow w-full h-full	'
 		}).addTo(map);
 
-		await map.on('layeradd', function () {
-			isLoading = false;
+		await map.on('layeradd', function (e) {
+			// If added layer is currently loading, spin !
+			if (e.layer.loading) isLoading = true;
+			if (typeof e.layer.on !== 'function') return;
+			e.layer.on('data:loading', function () {
+				isLoading = true;
+			});
+			e.layer.on('data:loaded', function () {
+				isLoading = false;
+			});
+		});	
+		await map.on('layerremove', function (e) {
+			// Clean-up
+			if (e.layer.loading) isLoading = true;
+			if (typeof e.layer.on !== 'function') return;
+			e.layer.off('data:loaded');
+			e.layer.off('data:loading');
 		});
 
 		getCurrentLocation();
