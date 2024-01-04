@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { Map, LayerGroup } from 'leaflet';
 	import { onMount, onDestroy } from 'svelte';
-	import { Button } from 'flowbite-svelte';
 
 	import {
 		cleanData,
@@ -47,6 +46,7 @@
 
 		await map.on('layeradd', function (e) {
 			// If added layer is currently loading, spin !
+			//@ts-ignore
 			if (e.layer.loading) isMapLoading.set(true);
 			if (typeof e.layer.on !== 'function') return;
 			e.layer.on('data:loading', function () {
@@ -58,6 +58,7 @@
 		});
 		await map.on('layerremove', function (e) {
 			// Clean-up
+			//@ts-ignore
 			if (e.layer.loading) isMapLoading.set(true);
 			if (typeof e.layer.on !== 'function') return;
 			e.layer.off('data:loaded');
@@ -111,12 +112,15 @@
 </script>
 
 <CleanData></CleanData>
+
 <div bind:this={mapContainer} class="w-full h-full">
 	{#if !($isMapLoading && $dataLoaded)}
 		<div
 			class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 p-2 rounded"
-		>	
+		>
 			<Circle3 size="100" unit="px" duration="2s" />
 		</div>
+	{:else}
+		<p>This Is A Test</p>
 	{/if}
 </div>
