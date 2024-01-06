@@ -12,6 +12,7 @@
 		isDarkReaderEnabled.subscribe((value) => {
 			if (value) {
 				document.body.classList.add('dark');
+				
 			} else {
 				document.body.classList.remove('dark');
 			}

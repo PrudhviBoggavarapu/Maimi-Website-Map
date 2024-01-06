@@ -33,52 +33,52 @@ export function museumToJSON(museum: Museum): Record<string, any> {
 }
 
 
-export const museums: Museum[] = [
-    {
-        id: "8c8127e9-7ff5-4bb1-8127-e97ff5abb1ef",
-        title: "Black Police Precinct & Courthouse Museum",
-        url: "https://historicalblackprecinct.org/"
-    },
-    {
-        id: "abe1f830-b9f1-4f94-a1f8-30b9f13f948a",
-        title: "HistoryMiami",
-        url: "http://www.historymiami.org"
-    },
-    {
-        id: "090a7a3c-6ba4-458a-8a7a-3c6ba4558a72",
-        title: "Zoo Miami",
-        url: "http://www.miamimetrozoo.com/"
-    },
-    {
-        id: "3feb985f-4e4b-4d06-ab98-5f4e4bcd0634",
-        title: "Museum of Graffiti",
-        url: "http://museumofgraffiti.com/"
-    }, {
-        id: "65f3092e-a82b-466c-b309-2ea82b266c9f",
-        title: "The Bass",
-        url: "http://www.thebass.org/"
-    }, {
-        id: "7a6a43b5-37d2-4e9e-aa43-b537d2ae9e1d",
-        title: "Perez Art Museum Miami",
-        url: "http://www.pamm.org"
-    }, {
-        id: "83332190-cbea-4de8-b321-90cbeafde82d",
-        title: "The Fruit and Spice Park",
-        url: "http://redlandfruitandspice.com"
-    }, {
-        id: "0603917f-9ddf-4c0b-8391-7f9ddf5c0b62",
-        title: "The Coral Gables Museum",
-        url: "http://coralgablesmuseum.org/"
-    }, {
-        id: "22627b49-3888-4d4b-a27b-4938889d4b0b",
-        title: "Phillip and Patricia Frost Museum of Science",
-        url: "http://www.frostscience.org/"
-    }, {
-        id: "90fcd072-d05f-4575-bcd0-72d05f357563",
-        title: "Miami Children's Museum",
-        url: "http://www.miamichildrensmuseum.org/"
-    }
-];
+    export const museums: Museum[] = [
+        {
+            id: "8c8127e9-7ff5-4bb1-8127-e97ff5abb1ef",
+            title: "Black Police Precinct & Courthouse Museum",
+            url: "https://historicalblackprecinct.org/"
+        },
+        {
+            id: "abe1f830-b9f1-4f94-a1f8-30b9f13f948a",
+            title: "HistoryMiami",
+            url: "http://www.historymiami.org"
+        },
+        {
+            id: "090a7a3c-6ba4-458a-8a7a-3c6ba4558a72",
+            title: "Zoo Miami",
+            url: "http://www.miamimetrozoo.com/"
+        },
+        {
+            id: "3feb985f-4e4b-4d06-ab98-5f4e4bcd0634",
+            title: "Museum of Graffiti",
+            url: "http://museumofgraffiti.com/"
+        }, {
+            id: "65f3092e-a82b-466c-b309-2ea82b266c9f",
+            title: "The Bass",
+            url: "http://www.thebass.org/"
+        }, {
+            id: "7a6a43b5-37d2-4e9e-aa43-b537d2ae9e1d",
+            title: "Perez Art Museum Miami",
+            url: "http://www.pamm.org"
+        }, {
+            id: "83332190-cbea-4de8-b321-90cbeafde82d",
+            title: "The Fruit and Spice Park",
+            url: "http://redlandfruitandspice.com"
+        }, {
+            id: "0603917f-9ddf-4c0b-8391-7f9ddf5c0b62",
+            title: "The Coral Gables Museum",
+            url: "http://coralgablesmuseum.org/"
+        }, {
+            id: "22627b49-3888-4d4b-a27b-4938889d4b0b",
+            title: "Phillip and Patricia Frost Museum of Science",
+            url: "http://www.frostscience.org/"
+        }, {
+            id: "90fcd072-d05f-4575-bcd0-72d05f357563",
+            title: "Miami Children's Museum",
+            url: "http://www.miamichildrensmuseum.org/"
+        }
+    ];
 
 export const selectedMuseum: Writable<Museum> = writable(museums[0]);
 export const isDarkReaderEnabled = writable(false);
