@@ -40,7 +40,7 @@ const CONCURRENT_REQUESTS: usize = 2;
 #[tokio::main]
 async fn main() {
     let client = Client::new();
-    let authenticated_client = DataClient::new("http://localhost:8080")
+    let authenticated_client = DataClient::new("http://localhost:8090")
         .auth_with_password(
             "users",
             "NormalUserForPocketbase",
