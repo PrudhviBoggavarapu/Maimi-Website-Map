@@ -1,7 +1,9 @@
-pub mod musiums {
-    use reqwest::Url;
+pub mod museum {
 
-    #[derive(Debug, Clone)]
+    use reqwest::Url;
+    use serde::{Deserialize, Serialize};
+
+    #[derive(Debug, Clone, Default, Deserialize, Serialize)]
     #[allow(dead_code)]
     pub struct Museum {
         pub id: String,
