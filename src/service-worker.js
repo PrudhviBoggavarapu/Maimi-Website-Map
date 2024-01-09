@@ -1,8 +1,5 @@
 // service-worker.js
 self.addEventListener('push', event => {
-    console.log('HERE');
-    console.log('Raw Data:', event.data.text());
-
     const data = event.data.json();
     console.log('Push event!! ', data);
     const title = data.title;
@@ -16,5 +13,9 @@ self.addEventListener('push', event => {
 
 self.addEventListener('notificationclick', function (event) {
     event.notification.close();
-    // Handle the notification click
+    const notificationData = event.notification.data;
+    if (notificationData && notificationData.link) {
+        event.waitUntil(clients.openWindow(notificationData.link));
+    }
+
 });

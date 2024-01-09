@@ -10,33 +10,7 @@
 
 	onMount(async () => {
 		// Main JavaScript file (e.g., app.js)
-		if ('serviceWorker' in navigator) {
-			navigator.serviceWorker
-				.register('/service-worker.js')
-				.then(function (registration) {
-					console.log('Service Worker registered with scope:', registration.scope);
-					return registration.pushManager.getSubscription().then(function (subscription) {
-						if (subscription) {
-							return subscription;
-						}
-
-						const vapidPublicKey =
-							'BB9FZK37PQyIOtQLVsxm_T7I_6dRz65xz_vCgODoJZKuscc3aJ8uo3koVFMgvP5d_v5IXliflKXCX6Mb9JUwqjo=';
-						const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);
-
-						return registration.pushManager.subscribe({
-							userVisibleOnly: true,
-							applicationServerKey: convertedVapidKey
-						});
-					});
-				})
-				.then(function (subscription) {
-					console.log(subscription.toJSON());
-				})
-				.catch(function (error) {
-					console.error('Service Worker registration failed:', error);
-				});
-		}
+		
 
 		isDarkReaderEnabled.subscribe((value) => {
 			if (value) {

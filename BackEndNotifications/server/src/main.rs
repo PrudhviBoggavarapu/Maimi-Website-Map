@@ -39,6 +39,15 @@ const CONCURRENT_REQUESTS: usize = 2;
 
 #[tokio::main]
 async fn main() {
+
+
+    
+}
+
+
+
+sudo fn oofda(){
+
     let client = Client::new();
     let authenticated_client = DataClient::new("http://localhost:8090")
         .auth_with_password(
@@ -49,7 +58,6 @@ async fn main() {
         .expect("Could not log into database");
 
     let MusiumVec = get_museums();
-
     let bodies = stream::iter(MusiumVec)
         .map(|mut MusObj| {
             let client = &client;

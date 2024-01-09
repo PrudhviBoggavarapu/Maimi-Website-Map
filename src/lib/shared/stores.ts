@@ -11,6 +11,56 @@ export const dataLoaded = writable(false);
 export const isMapLoading = writable(true);
 export const storeForOutputOfNotificaionData = writable(true);
 
+
+export async function registerServiceWorkerAndSubscribe() {
+    if ('serviceWorker' in navigator) {
+        try {
+            const registration = await navigator.serviceWorker.register('/service-worker.js');
+            console.log('Service Worker registered with scope:', registration.scope);
+
+            let subscription = await registration.pushManager.getSubscription();
+            if (! subscription) {
+                const vapidPublicKey = 'BB9FZK37PQyIOtQLVsxm_T7I_6dRz65xz_vCgODoJZKuscc3aJ8uo3koVFMgvP5d_v5IXliflKXCX6Mb9JUwqjo=';
+                const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);
+
+                subscription = await registration.pushManager.subscribe({userVisibleOnly: true, applicationServerKey: convertedVapidKey});
+            }
+
+            console.log(subscription.toJSON());
+            return subscription;
+        } catch (error) {
+            console.error('Service Worker registration failed:', error);
+        }
+    }
+}
+
+export function return_key_values(key_data : PushSubscription | undefined) {
+    if (! key_data) {
+        console.error('Service worker registration failed or no subscription data available');
+        return;
+    }
+    let broken_down_key_data = key_data.toJSON();
+    if (! broken_down_key_data.endpoint) {
+        console.error('No endpoint in subscription data');
+        return;
+    }
+    const newUser: PushNotificationConfig = {
+        data: {
+            endpoint: broken_down_key_data.endpoint,
+            keys: {
+                p256dh: broken_down_key_data.keys ?. p256dh || '', // Replace with actual key if available
+                auth: broken_down_key_data.keys ?. auth || '' // Replace with actual key if available
+            }
+        },
+        type: 1,
+        museum: 'Sunset'
+    };
+
+    return newUser;
+
+
+}
+
 export function urlBase64ToUint8Array(base64String : string | any[]) {
     const padding = '='.repeat((4 - (base64String.length % 4)) % 4);
     const base64 = (base64String + padding).replace(/\-/g, '+').replace(/_/g, '/');
@@ -22,6 +72,18 @@ export function urlBase64ToUint8Array(base64String : string | any[]) {
         outputArray[i] = rawData.charCodeAt(i);
     }
     return outputArray;
+}
+
+export interface PushNotificationConfig {
+    museum: string,
+    type: number,
+    data: {
+        endpoint: string;
+        keys: {
+            p256dh: string;
+            auth: string;
+        };
+    }
 }
 
 
