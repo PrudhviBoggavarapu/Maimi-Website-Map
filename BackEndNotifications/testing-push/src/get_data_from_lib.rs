@@ -1,18 +1,28 @@
 #![allow(non_snake_case)]
-use chrono::Utc;
-use pocketbase_sdk::client::Client as DataClient;
-pub mod musiums;
+use std::time::Duration;
 
+use crate::museum::museum::{get_museums, Museum};
+use crate::NotificationData;
+use chrono::Utc;
 use futures::{stream, StreamExt};
-use musiums::musiums::{get_museums, Museum};
+use pocketbase_sdk::client::Client as DataClient;
+use rayon::prelude::*;
 use reqwest::{self, Client};
 use serde::{Deserialize, Serialize};
 use tokio;
+use tokio::time::sleep;
 #[derive(Clone, Serialize, Deserialize, Debug, Default)]
 
 pub struct DatabaseOutput {
     pub time: String,
     pub available: String,
+}
+
+#[derive(Clone, Serialize, Deserialize, Debug, Default)]
+
+pub struct SendToPushNotification {
+    pub available: Vec<LocationItem>,
+    pub mus: Museum,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -34,13 +44,10 @@ pub struct MuseumsResponce {
     pub musium: Museum,
     pub data: StoreData,
 }
-
-const CONCURRENT_REQUESTS: usize = 2;
-
+#[allow(dead_code)]
 #[tokio::main]
 async fn main() {
-    let client = Client::new();
-    let authenticated_client = DataClient::new("http://localhost:8090")
+    let pocketbase_client = DataClient::new("http://localhost:8090")
         .auth_with_password(
             "users",
             "NormalUserForPocketbase",
@@ -48,8 +55,14 @@ async fn main() {
         )
         .expect("Could not log into database");
 
-    let MusiumVec = get_museums();
+    let gotten_data = get_data_from_miami(10).await;
+    let output = check_data_and_push_to_database(gotten_data, &pocketbase_client).await;
+    println!("{:?}", output);
+}
 
+pub async fn get_data_from_miami(CONCURRENT_REQUESTS: usize) -> Vec<MuseumsResponce> {
+    let client = Client::new();
+    let MusiumVec = get_museums();
     let bodies = stream::iter(MusiumVec)
         .map(|mut MusObj| {
             let client = &client;
@@ -89,41 +102,99 @@ async fn main() {
         })
         .buffer_unordered(CONCURRENT_REQUESTS);
     let results: Vec<MuseumsResponce> = bodies.collect().await;
+    results
+}
+
+pub async fn check_data_and_push_to_database(
+    results: Vec<MuseumsResponce>,
+    pocketbase_client: &pocketbase_sdk::client::Client<pocketbase_sdk::client::Auth>,
+) -> Vec<std::option::Option<SendToPushNotification>> {
     let evetything_sent: Vec<_> = results
-        .into_iter()
+        .into_par_iter()
         .map(|x| {
-            let string_to_push = x
-                .data
-                .available
-                .into_iter()
-                .map(|x| x.label)
+            let list_available_for_museum_item = x.data.available.into_iter().collect::<Vec<_>>();
+
+            let list_available_for_museum = list_available_for_museum_item
+                .iter()
+                .map(|x| x.label.clone())
                 .collect::<Vec<_>>()
                 .join("|");
 
-            let getOneObject = &authenticated_client
+            let getOneObject = &pocketbase_client
                 .records(Box::leak(x.musium.id.clone().into_boxed_str()))
                 .list()
                 .sort("-created")
                 .call::<DatabaseOutput>()
                 .expect("Could not get data")
                 .items[0];
-            match getOneObject.available == string_to_push {
-                true => {
-                    println!("They are the same, skipping");
-                }
+            match getOneObject.available == list_available_for_museum {
+                true => None,
                 false => {
                     println!("Pushed To Database {}", x.musium.title);
-                    authenticated_client
-                        .records(Box::leak(x.musium.id.into_boxed_str()))
+                    pocketbase_client
+                        .records(Box::leak(x.musium.id.clone().into_boxed_str()))
                         .create(DatabaseOutput {
                             time: Utc::now().format("%Y-%m-%d %H:%M:%S%.3fZ").to_string(),
-                            available: string_to_push,
+                            available: list_available_for_museum.clone(),
                         })
                         .call()
                         .expect("Could not send to database");
+                    Some(SendToPushNotification {
+                        available: list_available_for_museum_item,
+                        mus: x.musium,
+                    })
                 }
             }
         })
         .collect();
-    println!("{:?}", evetything_sent.len());
+    evetything_sent
+}
+
+pub async fn get_and_check_data(tx: tokio::sync::broadcast::Sender<Vec<NotificationData>>) {
+    let pocketbase_client = DataClient::new("http://localhost:8090")
+        .auth_with_password(
+            "users",
+            "NormalUserForPocketbase",
+            "X@freHk*!84oyMdb6V93ubZf6bRHAoShBsrnRaRcgr#uf*#fNmutzciMRoJF!%JteJ5V@FLd",
+        )
+        .expect("Could not log into database");
+
+    loop {
+        let gotten_data = get_data_from_miami(10).await;
+        let output = check_data_and_push_to_database(gotten_data, &pocketbase_client).await;
+
+        let shouldPrint = output.iter().flatten().count();
+        match shouldPrint {
+            0 => {}
+            _ => {
+                println!("{:?}", shouldPrint);
+                cleaned_data_to_send(output, tx.clone()).await;
+            }
+        }
+        sleep(Duration::from_secs(10)).await
+    }
+}
+
+pub async fn cleaned_data_to_send(
+    input: Vec<Option<SendToPushNotification>>,
+    tx: tokio::sync::broadcast::Sender<Vec<NotificationData>>,
+) {
+    let output = input
+        .into_iter()
+        .flatten()
+        .map(|x| {
+            x.available.into_iter().map(move |y| NotificationData {
+                title: format!("{} Has Pass {}", y.label, x.mus.title),
+                body: format!("{} Has Pass {}", y.label, x.mus.title),
+                icon: "/appicon.png".to_string(),
+                badge: "/appicon.png".to_string(),
+                link: "/appicon.png".to_string(),
+            })
+        })
+        .flatten()
+        .collect::<Vec<_>>();
+
+    if output.len() != 0 {
+        tx.send(output).unwrap();
+    }
 }

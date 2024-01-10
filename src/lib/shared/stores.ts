@@ -9,6 +9,83 @@ export const loading = writable(false);
 export const error = writable(null);
 export const dataLoaded = writable(false);
 export const isMapLoading = writable(true);
+export const storeForOutputOfNotificaionData = writable(true);
+
+
+export async function registerServiceWorkerAndSubscribe() {
+    if ('serviceWorker' in navigator) {
+        try {
+            const registration = await navigator.serviceWorker.register('/service-worker.js');
+            console.log('Service Worker registered with scope:', registration.scope);
+
+            let subscription = await registration.pushManager.getSubscription();
+            if (! subscription) {
+                const vapidPublicKey = 'BB9FZK37PQyIOtQLVsxm_T7I_6dRz65xz_vCgODoJZKuscc3aJ8uo3koVFMgvP5d_v5IXliflKXCX6Mb9JUwqjo=';
+                const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);
+
+                subscription = await registration.pushManager.subscribe({userVisibleOnly: true, applicationServerKey: convertedVapidKey});
+            }
+
+            console.log(subscription.toJSON());
+            return subscription;
+        } catch (error) {
+            console.error('Service Worker registration failed:', error);
+        }
+    }
+}
+
+export function return_key_values(key_data: PushSubscription |undefined) {
+    if (! key_data) {
+        console.error('Service worker registration failed or no subscription data available');
+        return;
+    }
+    let broken_down_key_data = key_data.toJSON();
+    if (! broken_down_key_data.endpoint) {
+        console.error('No endpoint in subscription data');
+        return;
+    }
+    const newUser: PushNotificationConfig = {
+        data: {
+            endpoint: broken_down_key_data.endpoint,
+            keys: {
+                p256dh: broken_down_key_data.keys ?. p256dh || '', // Replace with actual key if available
+                auth: broken_down_key_data.keys ?. auth || '' // Replace with actual key if available
+            }
+        },
+        type: 1,
+        museum: 'Sunset'
+    };
+
+    return newUser;
+
+
+}
+
+export function urlBase64ToUint8Array(base64String: string |any[]) {
+    const padding = '='.repeat((4 - (base64String.length % 4)) % 4);
+    const base64 = (base64String + padding).replace(/\-/g, '+').replace(/_/g, '/');
+
+    const rawData = window.atob(base64);
+    const outputArray = new Uint8Array(rawData.length);
+
+    for (let i = 0; i < rawData.length; ++ i) {
+        outputArray[i] = rawData.charCodeAt(i);
+    }
+    return outputArray;
+}
+
+export interface PushNotificationConfig {
+    museum: string,
+    type: number,
+    data: {
+        endpoint: string;
+        keys: {
+            p256dh: string;
+            auth: string;
+        };
+    }
+}
+
 
 export interface LocationItem {
     code: string;
@@ -33,56 +110,54 @@ export function museumToJSON(museum: Museum): Record<string, any> {
 }
 
 
-    export const museums: Museum[] = [
-        {
-            id: "8c8127e9-7ff5-4bb1-8127-e97ff5abb1ef",
-            title: "Black Police Precinct & Courthouse Museum",
-            url: "https://historicalblackprecinct.org/"
-        },
-        {
-            id: "abe1f830-b9f1-4f94-a1f8-30b9f13f948a",
-            title: "HistoryMiami",
-            url: "http://www.historymiami.org"
-        },
-        {
-            id: "090a7a3c-6ba4-458a-8a7a-3c6ba4558a72",
-            title: "Zoo Miami",
-            url: "http://www.miamimetrozoo.com/"
-        },
-        {
-            id: "3feb985f-4e4b-4d06-ab98-5f4e4bcd0634",
-            title: "Museum of Graffiti",
-            url: "http://museumofgraffiti.com/"
-        }, {
-            id: "65f3092e-a82b-466c-b309-2ea82b266c9f",
-            title: "The Bass",
-            url: "http://www.thebass.org/"
-        }, {
-            id: "7a6a43b5-37d2-4e9e-aa43-b537d2ae9e1d",
-            title: "Perez Art Museum Miami",
-            url: "http://www.pamm.org"
-        }, {
-            id: "83332190-cbea-4de8-b321-90cbeafde82d",
-            title: "The Fruit and Spice Park",
-            url: "http://redlandfruitandspice.com"
-        }, {
-            id: "0603917f-9ddf-4c0b-8391-7f9ddf5c0b62",
-            title: "The Coral Gables Museum",
-            url: "http://coralgablesmuseum.org/"
-        }, {
-            id: "22627b49-3888-4d4b-a27b-4938889d4b0b",
-            title: "Phillip and Patricia Frost Museum of Science",
-            url: "http://www.frostscience.org/"
-        }, {
-            id: "90fcd072-d05f-4575-bcd0-72d05f357563",
-            title: "Miami Children's Museum",
-            url: "http://www.miamichildrensmuseum.org/"
-        }
-    ];
-
+export const museums: Museum[] = [
+    {
+        id: "8c8127e9-7ff5-4bb1-8127-e97ff5abb1ef",
+        title: "Black Police Precinct & Courthouse Museum",
+        url: "https://historicalblackprecinct.org/"
+    },
+    {
+        id: "abe1f830-b9f1-4f94-a1f8-30b9f13f948a",
+        title: "HistoryMiami",
+        url: "http://www.historymiami.org"
+    },
+    {
+        id: "090a7a3c-6ba4-458a-8a7a-3c6ba4558a72",
+        title: "Zoo Miami",
+        url: "http://www.miamimetrozoo.com/"
+    },
+    {
+        id: "3feb985f-4e4b-4d06-ab98-5f4e4bcd0634",
+        title: "Museum of Graffiti",
+        url: "http://museumofgraffiti.com/"
+    }, {
+        id: "65f3092e-a82b-466c-b309-2ea82b266c9f",
+        title: "The Bass",
+        url: "http://www.thebass.org/"
+    }, {
+        id: "7a6a43b5-37d2-4e9e-aa43-b537d2ae9e1d",
+        title: "Perez Art Museum Miami",
+        url: "http://www.pamm.org"
+    }, {
+        id: "83332190-cbea-4de8-b321-90cbeafde82d",
+        title: "The Fruit and Spice Park",
+        url: "http://redlandfruitandspice.com"
+    }, {
+        id: "0603917f-9ddf-4c0b-8391-7f9ddf5c0b62",
+        title: "The Coral Gables Museum",
+        url: "http://coralgablesmuseum.org/"
+    }, {
+        id: "22627b49-3888-4d4b-a27b-4938889d4b0b",
+        title: "Phillip and Patricia Frost Museum of Science",
+        url: "http://www.frostscience.org/"
+    }, {
+        id: "90fcd072-d05f-4575-bcd0-72d05f357563",
+        title: "Miami Children's Museum",
+        url: "http://www.miamichildrensmuseum.org/"
+    }
+];
 export const selectedMuseum: Writable<Museum> = writable(museums[0]);
 export const isDarkReaderEnabled = writable(false);
-
 export async function get_api_and_store(url: RequestInfo |URL) {
     if (get(dataLoaded)) {
         return;

@@ -1,0 +1,29 @@
+[package]
+name = "testing-push"
+version = "0.1.0"
+edition = "2021"
+default-run = "testing-push"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+argparse = "0.2.2"
+axum = {version= "0.7.3", features= []}
+chrono = "0.4.31"
+futures = "0.3.30"
+reqwest = { version = "0.11.23", features = ["json", "blocking"] }
+isahc = "1.7.2"
+pocketbase-sdk = "0.1.1"
+serde = "1.0.195"
+serde_json = "1.0.111"
+tokio = {version= "1.35.1", features= ["full"]}
+web-push = "0.10.1"
+rayon = "1.8.0"
+
+
+# [[bin]]
+# name = "push_notifications"
+# path = "src/push_notif.rs"
+# [[bin]]
+# name = "get_data"
+# path = "src/get_data_from_lib.rs"
