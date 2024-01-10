@@ -8,12 +8,27 @@ dependencies:
   bits-ui:
     specifier: ^0.12.0
     version: 0.12.0(svelte@4.2.7)
+  clsx:
+    specifier: ^2.1.0
+    version: 2.1.0
+  cmdk-sv:
+    specifier: ^0.0.12
+    version: 0.0.12(svelte@4.2.7)
   flowbite-svelte-icons:
     specifier: ^0.4.5
     version: 0.4.5(svelte@4.2.7)(tailwind-merge@2.2.0)(tailwindcss@3.4.0)
+  lucide-svelte:
+    specifier: ^0.308.0
+    version: 0.308.0(svelte@4.2.7)
   pocketbase:
     specifier: ^0.20.1
     version: 0.20.1
+  tailwind-merge:
+    specifier: ^2.2.0
+    version: 2.2.0
+  tailwind-variants:
+    specifier: ^0.1.20
+    version: 0.1.20(tailwindcss@3.4.0)
 
 devDependencies:
   '@skeletonlabs/skeleton':
@@ -1626,6 +1641,20 @@ packages:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
 
+  /@melt-ui/svelte@0.61.2(svelte@4.2.7):
+    resolution: {integrity: sha512-BHkD9G31zQBToA4euDRBgTQRvWxT9scufOVCXgDO6HKTvyxFspbWT2bgiSFqAK4BbAGDn9Ao36Q8F9O71KN4OQ==}
+    peerDependencies:
+      svelte: '>=3 <5'
+    dependencies:
+      '@floating-ui/core': 1.5.2
+      '@floating-ui/dom': 1.5.3
+      '@internationalized/date': 3.5.1
+      dequal: 2.0.3
+      focus-trap: 7.5.4
+      nanoid: 4.0.2
+      svelte: 4.2.7
+    dev: false
+
   /@melt-ui/svelte@0.65.2(svelte@4.2.7):
     resolution: {integrity: sha512-BpsSl9Bjp1++8U3+LaDOFUoX/PFQ9N7QWFhlFdUEZduhrbVyU70v9A459SKrQ+esFSjvh1AvqJYkMAUJXJlAmQ==}
     peerDependencies:
@@ -2366,6 +2395,16 @@ packages:
       svelte: 4.2.7
     dev: false
 
+  /bits-ui@0.9.9(svelte@4.2.7):
+    resolution: {integrity: sha512-LkdkyTtpXdkjBzPZJVJgpcre4fut6DONoprMfadHFo82HNUhph+02CxDjYEcZcThb5z4YjSxMlCYvQPZm+YtfQ==}
+    peerDependencies:
+      svelte: ^4.0.0
+    dependencies:
+      '@melt-ui/svelte': 0.61.2(svelte@4.2.7)
+      nanoid: 5.0.4
+      svelte: 4.2.7
+    dev: false
+
   /brace-expansion@1.1.11:
     resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
     dependencies:
@@ -2464,6 +2503,21 @@ packages:
     resolution: {integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==}
     engines: {node: '>=10'}
     dev: true
+
+  /clsx@2.1.0:
+    resolution: {integrity: sha512-m3iNNWpd9rl3jvvcBnu70ylMdrXt8Vlq4HYadnU5fwcOtvkSQWPmj7amUcDT2qYI7risszBjI5AUIUox9D16pg==}
+    engines: {node: '>=6'}
+    dev: false
+
+  /cmdk-sv@0.0.12(svelte@4.2.7):
+    resolution: {integrity: sha512-d+eILSOb2W+/3U/j7xGTgGRrZkFB/z4Xlvj0ADrWhf34y9YLzJon3JCGP2hMil5IrVm0P/+IFIeCF5l3//kcjA==}
+    peerDependencies:
+      svelte: ^4.0.0
+    dependencies:
+      bits-ui: 0.9.9(svelte@4.2.7)
+      nanoid: 5.0.4
+      svelte: 4.2.7
+    dev: false
 
   /code-red@1.0.4:
     resolution: {integrity: sha512-7qJWqItLA8/VPVlKJlFXU+NBlo/qyfs39aJcuMT/2ere32ZqvF5OSxgdM5xOfJJ7O429gg2HM47y8v9P+9wrNw==}
@@ -3649,6 +3703,14 @@ packages:
       yallist: 4.0.0
     dev: true
 
+  /lucide-svelte@0.308.0(svelte@4.2.7):
+    resolution: {integrity: sha512-REknOvkuvSYAmNYFtMvqD96K8AHtE7J8MUIMJ/SxkrryGNcYmnUQt4GlNBk/+MGgAh+MePGRQR86aw+z6U5JvA==}
+    peerDependencies:
+      svelte: '>=3 <5'
+    dependencies:
+      svelte: 4.2.7
+    dev: false
+
   /magic-string@0.25.9:
     resolution: {integrity: sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==}
     dependencies:
@@ -4683,10 +4745,24 @@ packages:
     resolution: {integrity: sha512-Cat63mxsVJlzYvN51JmVXIgNoUokrIaT2zLclCXjRd8boZ0004U4KCs/sToJ75C6sdlByWxpYnb5Boif1VSFew==}
     dev: false
 
+  /tailwind-merge@1.14.0:
+    resolution: {integrity: sha512-3mFKyCo/MBcgyOTlrY8T7odzZFx+w+qKSMAmdFzRvqBfLlSigU6TZnlFHK0lkMwj9Bj8OYU+9yW9lmGuS0QEnQ==}
+    dev: false
+
   /tailwind-merge@2.2.0:
     resolution: {integrity: sha512-SqqhhaL0T06SW59+JVNfAqKdqLs0497esifRrZ7jOaefP3o64fdFNDMrAQWZFMxTLJPiHVjRLUywT8uFz1xNWQ==}
     dependencies:
       '@babel/runtime': 7.23.7
+
+  /tailwind-variants@0.1.20(tailwindcss@3.4.0):
+    resolution: {integrity: sha512-AMh7x313t/V+eTySKB0Dal08RHY7ggYK0MSn/ad8wKWOrDUIzyiWNayRUm2PIJ4VRkvRnfNuyRuKbLV3EN+ewQ==}
+    engines: {node: '>=16.x', pnpm: '>=7.x'}
+    peerDependencies:
+      tailwindcss: '*'
+    dependencies:
+      tailwind-merge: 1.14.0
+      tailwindcss: 3.4.0
+    dev: false
 
   /tailwindcss@3.4.0:
     resolution: {integrity: sha512-VigzymniH77knD1dryXbyxR+ePHihHociZbXnLZHUyzf2MMs2ZVqlUrZ3FvpXP8pno9JzmILt1sZPD19M3IxtA==}

@@ -3,8 +3,8 @@ from '$lib/wasm-lib/pkg/wasm_lib';
 import {get, writable} from 'svelte/store';
 import type {Writable}
 from 'svelte/store';
-export const cleanData: Writable < Location[] | null > = writable(null);
-export const responseData: Writable < StoreData | null > = writable(null);
+export const cleanData: Writable<Location[] | null> = writable(null);
+export const responseData: Writable<StoreData | null> = writable(null);
 export const loading = writable(false);
 export const error = writable(null);
 export const dataLoaded = writable(false);
@@ -34,7 +34,7 @@ export async function registerServiceWorkerAndSubscribe() {
     }
 }
 
-export function return_key_values(key_data : PushSubscription | undefined) {
+export function return_key_values(key_data: PushSubscription |undefined) {
     if (! key_data) {
         console.error('Service worker registration failed or no subscription data available');
         return;
@@ -61,7 +61,7 @@ export function return_key_values(key_data : PushSubscription | undefined) {
 
 }
 
-export function urlBase64ToUint8Array(base64String : string | any[]) {
+export function urlBase64ToUint8Array(base64String: string |any[]) {
     const padding = '='.repeat((4 - (base64String.length % 4)) % 4);
     const base64 = (base64String + padding).replace(/\-/g, '+').replace(/_/g, '/');
 
@@ -105,8 +105,7 @@ export interface Museum {
     title: string;
     url: string;
 }
-export function museumToJSON(museum : Museum): Record < string,
-any > {
+export function museumToJSON(museum: Museum): Record<string, any> {
     return {id: museum.id, title: museum.title, url: museum.url};
 }
 
@@ -156,67 +155,79 @@ export const museums: Museum[] = [
         title: "Miami Children's Museum",
         url: "http://www.miamichildrensmuseum.org/"
     }
-];export const selectedMuseum: Writable < Museum > = writable(museums[0]);export const isDarkReaderEnabled = writable(false);export async function get_api_and_store(url : RequestInfo | URL) {
-if (get(dataLoaded)) {
-    return;
-}
+];
+export const selectedMuseum: Writable<Museum> = writable(museums[0]);
+export const isDarkReaderEnabled = writable(false);
+export async function get_api_and_store(url: RequestInfo |URL) {
+    if (get(dataLoaded)) {
+        return;
+    }
 
 
-loading.set(true);
-error.set(null);
+    loading.set(true);
+    error.set(null);
 
-const headers = {
-    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0',
-    Accept: 'application/json, text/plain, */*',
-    'Accept-Language': 'en-US,en;q=0.5',
-    'Accept-Encoding': 'gzip, deflate, br',
-    'api-version': '1',
-    'iii-customer-domain': 'mdpls.na.iiivega.com',
-    'iii-host-domain': 'mdpls.na.iiivega.com',
-    Origin: 'https://mdpls.na.iiivega.com',
-    Connection: 'keep-alive',
-    Referer: 'https://mdpls.na.iiivega.com/',
-    'Sec-Fetch-Dest': 'empty',
-    'Sec-Fetch-Mode': 'cors',
-    'Sec-Fetch-Site': 'same-site',
-    Pragma: 'no-cache',
-    'Cache-Control': 'no-cache',
-    TE: 'trailers'
+    const headers = {
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0',
+        Accept: 'application/json, text/plain, */*',
+        'Accept-Language': 'en-US,en;q=0.5',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'api-version': '1',
+        'iii-customer-domain': 'mdpls.na.iiivega.com',
+        'iii-host-domain': 'mdpls.na.iiivega.com',
+        Origin: 'https://mdpls.na.iiivega.com',
+        Connection: 'keep-alive',
+        Referer: 'https://mdpls.na.iiivega.com/',
+        'Sec-Fetch-Dest': 'empty',
+        'Sec-Fetch-Mode': 'cors',
+        'Sec-Fetch-Site': 'same-site',
+        Pragma: 'no-cache',
+        'Cache-Control': 'no-cache',
+        TE: 'trailers'
+    };
+
+    const response = await fetch(url, {headers});
+    if (! response.ok) {
+        throw new Error(`HTTP error! status: ${
+            response.status
+        }`);
+    }
+    const data: StoreData = await response.json();
+    responseData.set(data);
+    dataLoaded.set(true);
+    return data;
 };
+export function createGoogleMapsURL(address: string) { // Encode the address
+    var encodedAddress = encodeURIComponent(address);
 
-const response = await fetch(url, {headers});
-if (! response.ok) {
-    throw new Error(`HTTP error! status: ${
-        response.status
-    }`);
+    // Create the Google Maps URL
+    var googleMapsURL = "https://www.google.com/maps/search/?api=1&query=" + encodedAddress;
+
+    return googleMapsURL;
+};
+export function getCurrentLocation() { // Check if Geolocation is supported
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+        console.log("Geolocation is not supported by this browser.");
+    }
 }
-const data: StoreData = await response.json();
-responseData.set(data);
-dataLoaded.set(true);
-return data;};export function createGoogleMapsURL(address : string) { // Encode the address
-var encodedAddress = encodeURIComponent(address);
-
-// Create the Google Maps URL
-var googleMapsURL = "https://www.google.com/maps/search/?api=1&query=" + encodedAddress;
-
-return googleMapsURL;};export function getCurrentLocation() { // Check if Geolocation is supported
-if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition, showError);
-} else {
-    console.log("Geolocation is not supported by this browser.");
-}}export function showPosition(position : any) {
-console.log("Latitude: " + position.coords.latitude + "\nLongitude: " + position.coords.longitude);}export function showError(error : any) {
-switch (error.code) {
-    case error.PERMISSION_DENIED:
-        console.log("User denied the request for Geolocation.");
-        break;
-    case error.POSITION_UNAVAILABLE:
-        console.log("Location information is unavailable.");
-        break;
-    case error.TIMEOUT:
-        console.log("The request to get user location timed out.");
-        break;
-    case error.UNKNOWN_ERROR:
-        console.log("An unknown error occurred.");
-        break;
-}}
+export function showPosition(position: any) {
+    console.log("Latitude: " + position.coords.latitude + "\nLongitude: " + position.coords.longitude);
+}
+export function showError(error: any) {
+    switch (error.code) {
+        case error.PERMISSION_DENIED:
+            console.log("User denied the request for Geolocation.");
+            break;
+        case error.POSITION_UNAVAILABLE:
+            console.log("Location information is unavailable.");
+            break;
+        case error.TIMEOUT:
+            console.log("The request to get user location timed out.");
+            break;
+        case error.UNKNOWN_ERROR:
+            console.log("An unknown error occurred.");
+            break;
+    }
+}

@@ -41,7 +41,7 @@
 			attribution: '© OpenStreetMap contributors',
 			maxZoom: 18,
 			className:
-				'filter dark:brightness-60 dark:invert dark:contrast-300 dark:saturate-30 dark:custom-hue-rotate dark:custom-brightness flex-grow w-full h-full	'
+				'filter dark:brightness-60 dark:invert dark:contrast-300 dark:saturate-30 dark:custom-hue-rotate dark:custom-brightness flex-grow w-full h-full z-10'
 		}).addTo(map);
 
 		await map.on('layeradd', function (e) {
@@ -113,14 +113,10 @@
 
 <CleanData></CleanData>
 
-<div bind:this={mapContainer} class="w-full h-full">
-	{#if !($isMapLoading && $dataLoaded)}
-		<div
-			class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 p-2 rounded"
-		>
-			<Circle3 size="100" unit="px" duration="2s" />
-		</div>
-	{:else}
-		<p>This Is A Test</p>
-	{/if}
+<div bind:this={mapContainer} class="w-full h-full z-10">
+	<div
+		class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 p-2 rounded"
+	>
+		<Circle3 size="100" unit="px" duration="2s" />
+	</div>
 </div>
