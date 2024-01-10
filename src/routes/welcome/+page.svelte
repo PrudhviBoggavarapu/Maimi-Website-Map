@@ -30,10 +30,10 @@
 				</strong>
 			</p>
 
-			<script src="/button.js"></script>
+			<script src="jsFiles/button.js"></script>
 			<noscript
 				><a href="https://liberapay.com/CodingPabs/donate"
-					><img alt="Donate using Liberapay" src="/donateLibre.svg" /></a
+					><img alt="Donate using Liberapay" src="jsFiles/donateLibre.svg" /></a
 				></noscript
 			>
 			<br />
