@@ -1,20 +1,15 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import Map from '$lib/SvelteStuff/Map.svelte';
-	import { isDarkReaderEnabled } from '$lib/shared/stores';
-	import DetectDarkReader from '$lib/SvelteStuff/DetectDarkReader.svelte';
+	import { dark_mode_handler } from '$lib/shared/stores';
 	import Header from '$lib/SvelteStuff/HeaderRewrite/Header.svelte';
 	import { goto } from '$app/navigation';
-	import CleanData from '$lib/SvelteStuff/CleanData.svelte';
-	import FetchStore from '$lib/SvelteStuff/FetchStore.svelte';
+	import { prelude_data } from '$lib/preload';
 
 	onMount(async () => {
-		isDarkReaderEnabled.subscribe((value) => {
-			if (value) {
-				document.body.classList.add('dark');
-			} else {
-				document.body.classList.remove('dark');
-			}
+		await prelude_data();
+		dark_mode_handler.subscribe((value) => {
+			console.log(value);
 		});
 
 		if (localStorage.getItem('SawWelcome') !== 'true') {
@@ -23,15 +18,12 @@
 	});
 </script>
 
-<html lang="en"
+<body lang="en" class="bg-background"
 	><div class="flex flex-col w-full h-screen">
 		<Header />
 		<Map></Map>
 	</div>
-	<FetchStore />
-	<DetectDarkReader />
-	<CleanData />
-</html>
+</body>
 
 <style>
 </style>

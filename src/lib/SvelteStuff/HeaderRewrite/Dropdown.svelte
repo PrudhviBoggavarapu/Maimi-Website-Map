@@ -22,7 +22,7 @@
 </script>
 
 <SelectRoot typeahead={true} onSelectedChange={(event) => handleSelection(event.value)}>
-	<SelectTrigger class="w-full">
+	<SelectTrigger class="w-full text-foreground">
 		<SelectValue placeholder="Select a Museum" />
 	</SelectTrigger>
 	<SelectContent>

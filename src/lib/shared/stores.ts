@@ -1,8 +1,8 @@
-import type {Location}
-from '$lib/wasm-lib/pkg/wasm_lib';
-import {get, writable} from 'svelte/store';
-import type {Writable}
-from 'svelte/store';
+import type { Location }
+    from '$lib/wasm-lib/pkg/wasm_lib';
+import { derived, get, writable } from 'svelte/store';
+import type { Writable }
+    from 'svelte/store';
 export const cleanData: Writable<Location[] | null> = writable(null);
 export const responseData: Writable<StoreData | null> = writable(null);
 export const loading = writable(false);
@@ -19,11 +19,11 @@ export async function registerServiceWorkerAndSubscribe() {
             console.log('Service Worker registered with scope:', registration.scope);
 
             let subscription = await registration.pushManager.getSubscription();
-            if (! subscription) {
+            if (!subscription) {
                 const vapidPublicKey = 'BB9FZK37PQyIOtQLVsxm_T7I_6dRz65xz_vCgODoJZKuscc3aJ8uo3koVFMgvP5d_v5IXliflKXCX6Mb9JUwqjo=';
                 const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);
 
-                subscription = await registration.pushManager.subscribe({userVisibleOnly: true, applicationServerKey: convertedVapidKey});
+                subscription = await registration.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: convertedVapidKey });
             }
 
             console.log(subscription.toJSON());
@@ -34,13 +34,13 @@ export async function registerServiceWorkerAndSubscribe() {
     }
 }
 
-export function return_key_values(key_data: PushSubscription |undefined) {
-    if (! key_data) {
+export function return_key_values(key_data: PushSubscription | undefined) {
+    if (!key_data) {
         console.error('Service worker registration failed or no subscription data available');
         return;
     }
     let broken_down_key_data = key_data.toJSON();
-    if (! broken_down_key_data.endpoint) {
+    if (!broken_down_key_data.endpoint) {
         console.error('No endpoint in subscription data');
         return;
     }
@@ -48,8 +48,8 @@ export function return_key_values(key_data: PushSubscription |undefined) {
         data: {
             endpoint: broken_down_key_data.endpoint,
             keys: {
-                p256dh: broken_down_key_data.keys ?. p256dh || '', // Replace with actual key if available
-                auth: broken_down_key_data.keys ?. auth || '' // Replace with actual key if available
+                p256dh: broken_down_key_data.keys?.p256dh || '', // Replace with actual key if available
+                auth: broken_down_key_data.keys?.auth || '' // Replace with actual key if available
             }
         },
         type: 1,
@@ -61,14 +61,14 @@ export function return_key_values(key_data: PushSubscription |undefined) {
 
 }
 
-export function urlBase64ToUint8Array(base64String: string |any[]) {
+export function urlBase64ToUint8Array(base64String: string | any[]) {
     const padding = '='.repeat((4 - (base64String.length % 4)) % 4);
     const base64 = (base64String + padding).replace(/\-/g, '+').replace(/_/g, '/');
 
     const rawData = window.atob(base64);
     const outputArray = new Uint8Array(rawData.length);
 
-    for (let i = 0; i < rawData.length; ++ i) {
+    for (let i = 0; i < rawData.length; ++i) {
         outputArray[i] = rawData.charCodeAt(i);
     }
     return outputArray;
@@ -106,7 +106,7 @@ export interface Museum {
     url: string;
 }
 export function museumToJSON(museum: Museum): Record<string, any> {
-    return {id: museum.id, title: museum.title, url: museum.url};
+    return { id: museum.id, title: museum.title, url: museum.url };
 }
 
 
@@ -157,8 +157,37 @@ export const museums: Museum[] = [
     }
 ];
 export const selectedMuseum: Writable<Museum> = writable(museums[0]);
-export const isDarkReaderEnabled = writable(false);
-export async function get_api_and_store(url: RequestInfo |URL) {
+export const isDarkReaderEnabled: Writable<boolean> = writable(false);
+export const targetDarkMode: Writable<boolean> = writable(false);
+
+export enum DarkModeState {
+    DarkReaderEnabledLightMode = "Dark Reader Enabled + Light Mode",
+    DarkReaderEnabledDarkMode = "Dark Reader Enabled + Dark Mode",
+    DarkReaderDisabledLightMode = "Dark Reader Disabled + Light Mode",
+    DarkReaderDisabledDarkMode = "Dark Reader Disabled + Dark Mode"
+}
+
+export const dark_mode_handler = derived(
+    [isDarkReaderEnabled, targetDarkMode],
+    ([$isDarkReaderEnabled, $targetDarkMode]) => {
+        if ($isDarkReaderEnabled && !$targetDarkMode) {
+            return DarkModeState.DarkReaderEnabledLightMode;
+        } else if ($isDarkReaderEnabled && $targetDarkMode) {
+            return DarkModeState.DarkReaderEnabledDarkMode;
+        } else if (!$isDarkReaderEnabled && !$targetDarkMode) {
+            return DarkModeState.DarkReaderDisabledLightMode;
+        } else {
+            return DarkModeState.DarkReaderDisabledDarkMode;
+        }
+    }
+);
+
+
+
+
+
+
+export async function get_api_and_store(url: RequestInfo | URL) {
     if (get(dataLoaded)) {
         return;
     }
@@ -186,11 +215,10 @@ export async function get_api_and_store(url: RequestInfo |URL) {
         TE: 'trailers'
     };
 
-    const response = await fetch(url, {headers});
-    if (! response.ok) {
-        throw new Error(`HTTP error! status: ${
-            response.status
-        }`);
+    const response = await fetch(url, { headers });
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status
+            }`);
     }
     const data: StoreData = await response.json();
     responseData.set(data);

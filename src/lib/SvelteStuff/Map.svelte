@@ -6,14 +6,10 @@
 		cleanData,
 		createGoogleMapsURL,
 		getCurrentLocation,
-		isMapLoading,
-		dataLoaded
+		isMapLoading
 	} from '../shared/stores';
-	import CleanData from './CleanData.svelte';
 	import { Circle3 } from 'svelte-loading-spinners';
 	let L: typeof import('leaflet');
-
-	type LeafletType = typeof L;
 
 	let map: Map | LayerGroup<any>;
 	/**
@@ -79,7 +75,7 @@
 					.addTo(map)
 					.bindPopup('This is where you are');
 			},
-			(item) => {}
+			(_item: any) => {}
 		);
 
 		cleanData.subscribe((value) => {
@@ -110,8 +106,6 @@
 		}
 	});
 </script>
-
-<CleanData></CleanData>
 
 <div bind:this={mapContainer} class="w-full h-full z-10">
 	<div
