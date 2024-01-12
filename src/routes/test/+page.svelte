@@ -1,4 +1,6 @@
 <script lang="ts">
+	import SettingsButton from '$lib/SvelteStuff/HeaderRewrite/SettingButtonStuff/SettingsButton.svelte';
+	import Label from '$lib/components/ui/label/label.svelte';
 	import { isDarkReaderEnabled } from '$lib/shared/stores';
 	import { onMount } from 'svelte';
 
@@ -9,8 +11,10 @@
 </script>
 
 <!-- The UI part of your component -->
-<div>
-	Dark Reader is {$isDarkReaderEnabled ? 'enabled' : 'disabled'}.
+<div class="flex-col p-2">
+	<Label>
+		Dark Reader is {$isDarkReaderEnabled ? 'enabled' : 'disabled'}.
+	</Label>
 	<button
 		class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
 		on:click={() => {
@@ -40,4 +44,6 @@
 	>
 		Clear Worker
 	</button>
+
+	<SettingsButton />
 </div>

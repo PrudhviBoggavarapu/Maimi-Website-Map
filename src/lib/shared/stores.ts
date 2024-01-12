@@ -9,6 +9,8 @@ export const loading = writable(false);
 export const error = writable(null);
 export const dataLoaded = writable(false);
 export const isMapLoading = writable(true);
+export const list_view_store = writable(false);
+
 export const storeForOutputOfNotificaionData = writable(true);
 
 
@@ -224,6 +226,7 @@ export async function get_api_and_store(url: RequestInfo | URL) {
     responseData.set(data);
     return data;
 };
+
 export function createGoogleMapsURL(address: string) { // Encode the address
     var encodedAddress = encodeURIComponent(address);
 
@@ -232,6 +235,48 @@ export function createGoogleMapsURL(address: string) { // Encode the address
 
     return googleMapsURL;
 };
+
+
+
+
+
+export function createLibraryURL(loc: Location) { // Encode the address
+    let result: string;
+    switch (loc.name) {
+        case "Coral Gables(Temporary Location)":
+            result = "https://www.mdpls.org/branch-coral-gables-temporary";
+            break;
+        case "Culmer Overtown":
+            result = "https://mdpls.org/branch-culmerovertown";
+            break;
+        case "Main Library":
+            result = "https://mdpls.org/branch-main";
+            break;
+        case "Mobile Library Services":
+            result = "https://mdpls.org/mobile-library";
+            break;
+        case "Northeast Dade – Aventura":
+            result = "https://mdpls.org/branch-northeast-dade-aventura";
+            break;
+        case "Westchester Health and Wellness Information Center":
+            result = "https://mdpls.org/branch-westchester-wellness-center";
+            break;
+        default:
+            var encodedAddress = encodeURIComponent(loc.name.replaceAll(' ', '-'));
+            var URL = "https://mdpls.org/branch-" + encodedAddress;
+            result = URL;
+    }
+
+    return result; // This will output the result based on loc.name
+
+
+};
+
+
+
+
+
+
 export function getCurrentLocation() { // Check if Geolocation is supported
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
