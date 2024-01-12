@@ -67,7 +67,11 @@
 			class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg m-6"
 			on:click={() => {
 				localStorage.setItem('SawWelcome', 'true');
-				goto('/');
+				goto('/').then(() => {
+					setTimeout(() => {
+						window.location.reload();
+					}, 20); // Adjust the timeout duration as needed
+				});
 			}}
 			>I have read everything and i understand what this website is about
 		</button>
