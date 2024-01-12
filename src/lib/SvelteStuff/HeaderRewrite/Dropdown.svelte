@@ -7,9 +7,7 @@
 		Item as SelectItem
 	} from '$lib/components/ui/select';
 	import { museums, type Museum, dataLoaded, selectedMuseum } from '$lib/shared/stores';
-
 	let sorted_musium = museums.slice().sort((a, b) => a.title.localeCompare(b.title));
-
 	export let selectedMuseumLocal: Museum | null = null;
 	let selectedMuseumId = museums[0].id;
 

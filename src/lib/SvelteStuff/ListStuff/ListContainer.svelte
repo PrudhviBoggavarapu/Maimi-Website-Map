@@ -1,7 +1,12 @@
 <script lang="ts">
 	import type { Location } from '$lib/wasm-lib/pkg/wasm_lib';
 	import * as Table from '$lib/components/ui/table';
-	import { cleanData, createGoogleMapsURL, selectedMuseum } from '$lib/shared/stores';
+	import {
+		cleanData,
+		createGoogleMapsURL,
+		createLibraryURL,
+		selectedMuseum
+	} from '$lib/shared/stores';
 	let locations: Location[];
 
 	$: {
@@ -24,7 +29,10 @@
 	<Table.Body>
 		{#each locations as location, i (i)}
 			<Table.Row>
-				<Table.Cell class="text-foreground">{location.name + ' Library'}</Table.Cell>
+				<Table.Cell class="text-foreground"
+					><a href={createLibraryURL(location)}>{location.name + ' Library'}</a></Table.Cell
+				>
+
 				<Table.Cell class="text-foreground"
 					><a href={createGoogleMapsURL(location.address)}>{location.address}</a></Table.Cell
 				>
