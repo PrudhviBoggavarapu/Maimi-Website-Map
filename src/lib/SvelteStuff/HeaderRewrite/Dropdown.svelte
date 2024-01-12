@@ -6,7 +6,7 @@
 		Content as SelectContent,
 		Item as SelectItem
 	} from '$lib/components/ui/select';
-	import { museums, type Museum } from '$lib/shared/stores';
+	import { museums, type Museum, dataLoaded, selectedMuseum } from '$lib/shared/stores';
 
 	let sorted_musium = museums.slice().sort((a, b) => a.title.localeCompare(b.title));
 
@@ -17,7 +17,12 @@
 	function handleSelection(value: string) {
 		selectedMuseumId = value;
 		selectedMuseumLocal = museums.find((m) => m.id === selectedMuseumId) || null;
-		console.log(selectedMuseumId);
+		dataLoaded.set(false);
+		if (selectedMuseumLocal) {
+			selectedMuseum.set(selectedMuseumLocal);
+		} else {
+			console.log('SOMETHING IS BROKEN IS DROPDOWN HANDLER FOR THE HEADER');
+		}
 	}
 </script>
 

@@ -1,12 +1,10 @@
 <script>
-	import { responseData, loading, error } from '../shared/stores';
+	import { responseData, loading, error } from '../../shared/stores';
 
 	$: if ($loading) {
-		console.log('Loading data...');
 	} else if ($error) {
 		console.error('Error:', $error);
 	} else {
-		console.log('Data fetch completed:', $responseData);
 	}
 </script>
 

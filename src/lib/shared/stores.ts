@@ -222,7 +222,6 @@ export async function get_api_and_store(url: RequestInfo | URL) {
     }
     const data: StoreData = await response.json();
     responseData.set(data);
-    dataLoaded.set(true);
     return data;
 };
 export function createGoogleMapsURL(address: string) { // Encode the address

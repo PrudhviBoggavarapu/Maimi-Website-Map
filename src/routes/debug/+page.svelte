@@ -1,7 +1,5 @@
 <script>
-	import FetchStore from '$lib/SvelteStuff/FetchStore.svelte';
-	import RenderComponent from '$lib/SvelteStuff/RenderComponent.svelte';
+	import RenderComponent from '$lib/SvelteStuff/DebugStuff/RenderComponent.svelte';
 </script>
 
-<FetchStore />
 <RenderComponent />

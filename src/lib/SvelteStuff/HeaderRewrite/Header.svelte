@@ -9,32 +9,18 @@
 
 <div class="flex space-x-1.5 p-2 z-50">
 	<DarkModeButton />
+	<Dropdown bind:selectedMuseumLocal></Dropdown>
+
 	<label
 		for="Count of data"
-		class="bg-primary text-primary-foreground py-2 px-4 rounded h-10 w-1/24 flex items-center text-sm"
-		>Count:
-		<div class="pl-3">
-			{#if $responseData?.available.length == null}
-				<Circle size="1" unit="rem" />
-			{:else}
-				{$responseData.available.length}
-			{/if}
-		</div>
-	</label>
-	<Dropdown bind:selectedMuseumLocal></Dropdown>
-	<Button
-		class="w-1/12 bg-primary text-primary-foreground flex items-center text-sm overflow-hidden content-around inline-box "
-		on:click={() => {
-			dataLoaded.set(false);
-			selectedMuseum.set(selectedMuseumLocal);
-			console.log(selectedMuseumLocal);
-		}}
+		class="bg-primary text-primary-foreground py-2 px-4 rounded h-10 w-fixed w-1/24 min-w-12 flex justify-center items-center text-center"
 	>
-		aaaaaaaa
-		{#if $dataLoaded}
-			LOADED
+		{#if $responseData?.available.length == null || !$dataLoaded}
+			<div class="py-1">
+				<Circle size=".9" unit="rem" />
+			</div>
 		{:else}
-			LOADING
-		{/if}</Button
-	>
+			{$responseData.available.length}
+		{/if}
+	</label>
 </div>

@@ -6,7 +6,8 @@ import {
     cleanData,
     targetDarkMode,
     dark_mode_handler,
-    DarkModeState
+    DarkModeState,
+    dataLoaded
 } from '$lib/shared/stores';
 import { derived, get } from 'svelte/store';
 
@@ -35,6 +36,8 @@ export async function clean_data() {
                 return lib.get_best_match(item.itemLocationLabel);
             });
             cleanData.set(cleaned_data);
+            dataLoaded.set(true);
+
         }
     });
 }
@@ -43,14 +46,6 @@ function checkDarkReaderMeta() {
 }
 
 export async function detectdarkReader() {
-
-
-
-
-
-
-
-
     const observer = new MutationObserver((mutationsList, observer) => {
         mutationsList.find((mutation) => {
             if (mutation.type === 'childList' || mutation.type === 'attributes') {
@@ -60,7 +55,6 @@ export async function detectdarkReader() {
             return false;
         });
     });
-
     observer.observe(document.documentElement, {
         childList: true,
         attributes: true,
@@ -69,8 +63,6 @@ export async function detectdarkReader() {
 
     checkDarkReaderMeta();
 }
-
-
 export async function better_dark_mode_handling() {
     dark_mode_handler.subscribe((state) => {
         const existingLock = document.head.querySelector('meta[name="darkreader-lock"]');
@@ -79,16 +71,18 @@ export async function better_dark_mode_handling() {
         switch (state) {
             case DarkModeState.DarkReaderEnabledLightMode:
                 // Handle Dark Reader Enabled + Light Mode
-                if (existingLock) document.head.removeChild(existingLock);
-                bodyClassList.remove('dark');
-                break;
-            case DarkModeState.DarkReaderEnabledDarkMode:
-                // Handle Dark Reader Enabled + Dark Mode
                 if (!existingLock) {
                     const lock = document.createElement('meta');
                     lock.name = 'darkreader-lock';
                     document.head.appendChild(lock);
                 }
+
+                bodyClassList.remove('dark');
+                break;
+            case DarkModeState.DarkReaderEnabledDarkMode:
+                // Handle Dark Reader Enabled + Dark Mode
+                if (existingLock)
+                    document.head.removeChild(existingLock);
                 bodyClassList.add('dark');
                 break;
             case DarkModeState.DarkReaderDisabledLightMode:
@@ -107,9 +101,14 @@ export async function better_dark_mode_handling() {
 }
 
 
+function onPageLoad() {
+    console.log('Page is fully loaded');
+}
+
 
 export async function prelude_data() {
     await get_data_from_api();
+    window.addEventListener('load', onPageLoad());
     await detectdarkReader();
     await clean_data();
     await better_dark_mode_handling();
