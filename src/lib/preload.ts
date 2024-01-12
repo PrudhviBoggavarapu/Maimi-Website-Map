@@ -4,7 +4,6 @@ import {
     selectedMuseum,
     responseData,
     cleanData,
-    targetDarkMode,
     dark_mode_handler,
     DarkModeState,
     dataLoaded

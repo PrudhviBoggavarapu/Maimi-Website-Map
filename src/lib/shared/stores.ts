@@ -9,6 +9,8 @@ export const loading = writable(false);
 export const error = writable(null);
 export const dataLoaded = writable(false);
 export const isMapLoading = writable(true);
+export const list_view_store = writable(false);
+
 export const storeForOutputOfNotificaionData = writable(true);
 
 

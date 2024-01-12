@@ -2,6 +2,7 @@
 	import { Button } from '$lib/components/ui/button';
 	import DarkModeButton from '$lib/SvelteStuff/DarkModeButton.svelte';
 	import Dropdown from './Dropdown.svelte';
+	import ListButton from './ListButton.svelte';
 	import { dataLoaded, responseData, selectedMuseum } from '$lib/shared/stores';
 	import { Circle } from 'svelte-loading-spinners';
 	let selectedMuseumLocal: any;
@@ -9,6 +10,7 @@
 
 <div class="flex space-x-1.5 p-2 z-50">
 	<DarkModeButton />
+	<ListButton />
 	<Dropdown bind:selectedMuseumLocal></Dropdown>
 
 	<label
