@@ -1,15 +1,21 @@
 {
-  "short_name": "MuseumPassMap",
-  "name": "Library Museum Pass Locator",
-  "icons": [
-    {
-      "src": "/appicon.png",
-      "sizes": "1024x1024",
-      "type": "image/png"
-    }
-  ],
-  "start_url": "/", 
-  "background_color": "#ffffff",
-  "theme_color": "#317EFB",
-  "display": "standalone"
+    "short_name": "MuseumPassMap",
+    "name": "Library Museum Pass Locator",
+    "icons": [
+        {
+            "src": "/appicon.png",
+            "sizes": "1024x1024",
+            "type": "image/png"
+        }, {
+            "src": "/maskable_icon.png",
+            "sizes": "323x323",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+
+    ],
+    "start_url": "/",
+    "background_color": "#ffffff",
+    "theme_color": "#317EFB",
+    "display": "standalone"
 }
