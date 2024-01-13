@@ -1,4 +1,4 @@
-import type { Location }
+import { Location }
     from '$lib/wasm-lib/pkg/wasm_lib';
 import { derived, get, writable } from 'svelte/store';
 import type { Writable }
@@ -10,6 +10,7 @@ export const error = writable(null);
 export const dataLoaded = writable(false);
 export const isMapLoading = writable(true);
 export const list_view_store = writable(false);
+export const userLocation: Writable<number[] | null> = writable(null);
 
 export const storeForOutputOfNotificaionData = writable(true);
 
@@ -286,6 +287,7 @@ export function getCurrentLocation() { // Check if Geolocation is supported
 }
 export function showPosition(position: any) {
     console.log("Latitude: " + position.coords.latitude + "\nLongitude: " + position.coords.longitude);
+    userLocation.set([position.coords.latitude, position.coords.longitude])
 }
 export function showError(error: any) {
     switch (error.code) {
@@ -302,4 +304,49 @@ export function showError(error: any) {
             console.log("An unknown error occurred.");
             break;
     }
+}
+
+
+function haversineDistance(lat1: number, lon1: number, lat2: number, lon2: number): number {
+    const earthRadiusKm = 6371.0; // Radius of the Earth in kilometers
+    const milesPerKilometer = 0.621371; // Conversion factor from kilometers to miles
+
+    const dLat = degreesToRadians(lat2 - lat1);
+    const dLon = degreesToRadians(lon2 - lon1);
+
+    const radLat1 = degreesToRadians(lat1);
+    const radLat2 = degreesToRadians(lat2);
+
+    const a = Math.sin(dLat / 2) ** 2 +
+        Math.sin(dLon / 2) ** 2 * Math.cos(radLat1) * Math.cos(radLat2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+    return earthRadiusKm * c * milesPerKilometer; // Convert the distance to miles
+}
+
+
+function degreesToRadians(degrees: number): number {
+    return degrees * Math.PI / 180;
+}
+export function createLocationWithDistance(location: Location, distance: number | null): LocationWithDistance {
+    return { location, distance };
+}
+
+export type LocationWithDistance = {
+    location: Location;  // Reference to the original Location object
+    distance: number;    // Calculated distance
+};
+
+export function sortByDistance(locations: Location[], refLatitude: number, refLongitude: number): LocationWithDistance[] {
+    // Map each location to a LocationWithDistance
+    const locationsWithDistance = locations.map(location => {
+        const distance = haversineDistance(refLatitude, refLongitude, location.latitude, location.longitude);
+        return {
+            location: location, // Keep a reference to the original Location object
+            distance: distance  // Store the calculated distance
+        };
+    });
+
+    // Sort the array based on the distance
+    return locationsWithDistance.sort((a, b) => a.distance - b.distance);
 }
