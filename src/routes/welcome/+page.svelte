@@ -20,8 +20,10 @@
 			</p>
 
 			<p class="text-lg mt-4">
-				Start by picking a museum from the dropdown, then click the load button. This will display
-				the libraies that have that a pass available.
+				Start by picking a museum from the dropdown This will display the libraies that have that a
+				pass available. There is also a number to the right of the screen, it shows how many museums
+				have the pass. You can also click the list button, it will display all the libraries in a
+				list view.
 			</p>
 
 			<p class="text-lg mt-4">
@@ -30,12 +32,6 @@
 				</strong>
 			</p>
 
-			<script src="jsFiles/button.js"></script>
-			<noscript
-				><a href="https://liberapay.com/CodingPabs/donate"
-					><img alt="Donate using Liberapay" src="jsFiles/donateLibre.svg" /></a
-				></noscript
-			>
 			<br />
 			<br />
 		</div>
@@ -70,7 +66,7 @@
 				goto('/').then(() => {
 					setTimeout(() => {
 						window.location.reload();
-					}, 20); // Adjust the timeout duration as needed
+					}, 0); // Adjust the timeout duration as needed
 				});
 			}}
 			>I have read everything and i understand what this website is about
